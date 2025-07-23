@@ -48,5 +48,39 @@ export default function Navbar() {
             </div>
 
         </nav>
+
+        <div className={`mobileSidebar ${isOpen ? "sidebarOpen" : ''}`}>
+            <i className={`fas fa-user userIcon`}></i>
+            <Link to="/shop" className="link" onClick={toggleSidebar}>Buy Perfumes</Link>
+            <Link to="/shop" className="link" onClick={toggleSidebar}>Exclusive</Link>
+            <Link to="/shop" className="link" onClick={toggleSidebar}>Men</Link>
+            <Link to="/shop" className="link" onClick={toggleSidebar}>Women</Link>
+            <Link to="/shop" className="link" onClick={toggleSidebar}>Scent of the Month</Link>
+            <Link to="/about" className="link" onClick={toggleSidebar}>About</Link>
+            <a href="#contact" className="link" onClick={toggleSidebar}>Contact</a>
+        </div>
+
+        <div className={`cartSidebar ${cartOpen ? "cartOpen" : ''}`}>
+            <div>
+                <div className="cartSidebarHeader">
+                    <h3><i className="fas fa-shopping-bag"></i> CART</h3>
+                    <button onClick={toggleCart} className="cartSidebarCloseBtn">
+                        <i className="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div className="cartSidebarItems">
+                    <p className="cartSidebarEmptyText">Your cart is empty</p>
+
+                    <button className="startShoppingBtn" onClick={() => { toggleCart(); navigate('/shop'); }}>
+                        START SHOPPING
+                    </button>                    
+                </div>   
+                
+            </div>
+
+
+        </div>
+    </>
     )
 }
