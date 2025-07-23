@@ -35,6 +35,18 @@ export default function Navbar() {
                 </Link>
                 <i className="fas fa-user userIcon"></i>
             </div>
+
+
+            <div className="navbarMobileActions">
+                <button onClick={toggleCart} className="cartIconMobile">
+                    <i className="fa-solid fa-cart-shopping"></i>
+                </button>
+
+                <button onClick={toggleSidebar} className="hamburger">
+                    <i className={isOpen ? 'fas fa-times' : 'fas fa-bars'}></i>
+                </button>
+            </div>
+
         </nav>
     )
 }
