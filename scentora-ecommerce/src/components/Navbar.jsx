@@ -4,12 +4,13 @@ import "./Navbar.css";
 import '../App.css';
 
 export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+    const [cartOpen, setCartOpen] = useState(false);
+    const toggleSidebar = () => setIsOpen(!isOpen);
+    const toggleCart = () => setCartOpen(!cartOpen);
+
+    const navigate = useNavigate();
     return (
-        <nav>
-            <Link to={"/shop"}>Buy Perfumes </Link>
-            <Link to={"/about"}>About Us </Link>
-            <Link to={"/"}>Scentora </Link>
-            <Link to={"/cart"}>Cart</Link>
     <>
         <nav className="navbar">
             <div className="desktopMenu desktopLinks">
