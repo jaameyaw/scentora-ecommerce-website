@@ -1,0 +1,74 @@
+
+.hero {
+    background: url('images/hero-background2.jpg') right;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 50vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 2rem 3rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 90vw;
+}
+
+.hero h1 {
+    font-size: 1.9rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    line-height: 1.25;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    color: #555;
+    font-family: var(--font-body);
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.heroButton {
+  padding: 0.75rem 1.35em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--eerrie-black);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.heroButton:hover {
+  background-color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 376px) {
+    .hero h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-overlay {
+        padding: 2.5rem 3rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .hero p {
+        text-align: center;
+    }
+}
+
+
