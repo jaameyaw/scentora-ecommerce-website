@@ -50,6 +50,8 @@ export default function Navbar() {
 
         </nav>
 
+
+
         <div className={`mobileSidebar ${isOpen ? "sidebarOpen" : ''}`}>
             <i className={`fas fa-user userIcon`}></i>
             <Link to="/shop" className="link" onClick={toggleSidebar}>Buy Perfumes</Link>
@@ -79,8 +81,6 @@ export default function Navbar() {
                 </div>   
                 
             </div>
-
-
         </div>
     </>
     )
