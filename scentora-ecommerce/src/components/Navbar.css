@@ -1,11 +1,12 @@
 
+
 .navbar {
   background-color: var( --bg-baby-powder);
   color: var(--eerrie-black);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
@@ -124,6 +125,7 @@
   margin-top: 1rem;
 }
 
+
 @media (min-width: 1024px) {
   .navbarMobileActions {
     display: none;
@@ -135,18 +137,22 @@
     align-items: center;
   }
 
-  .cartIconDesktop {
+  .cartIconDesktop, .userIcon {
     cursor: pointer;
     background: none;
     border: none;
   }
 
-  .cartIconDesktop i {
+  .cartIconDesktop i, .userIcon{
     color: var(--eerrie-black);
     transition: color 0.3s ease;
   }
 
-  .cartIconDesktop i:hover {
+  .userIcon, .cartIconDesktop i {
+    font-size: 1rem;
+  }
+
+  .cartIconDesktop i:hover, .userIcon:hover {
     color: var(--gold);
   }
 
