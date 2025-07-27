@@ -10,7 +10,10 @@ export default function Hero() {
     return (                          
         <section className="hero">
             <div className="hero-overlay">
-                <h1>Refreshing &<br />Clean Spring<br /><span>Scents are Here!</span></h1>
+                <h1>Refreshing &
+                    <span className="break-mobile"> Clean Spring </span>
+                    <span className="break-desktop">Scents are Here!</span>
+                </h1>
                 <p>Luxury fragrances curated<br />for your uniqueness.</p> 
                 <Button
                 className="heroButton"
