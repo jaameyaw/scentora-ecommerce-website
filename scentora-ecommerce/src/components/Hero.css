@@ -80,7 +80,7 @@
 
 @media (min-width:  768px) {
   .hero {
-    min-height: 90vh;
+    min-height: 80vh;
     text-align: left;
     justify-content: flex-start;
     
