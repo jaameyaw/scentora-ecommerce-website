@@ -1,15 +1,15 @@
 
 .hero {
-    background: url('images/hero-background2.jpg') right;
-    background-blend-mode: overlay;
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 50vh;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background: url('images/hero-background2.jpg') right;
+  background-blend-mode: overlay;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .hero-overlay {
