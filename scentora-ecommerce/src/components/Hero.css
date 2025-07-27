@@ -62,7 +62,6 @@
 }
 
 .heroButton:hover {
-  
   background-color: var(--eerrie-black);
   color: white;
   transform: scale(1.05);
@@ -70,13 +69,13 @@
 }
 
 @media (max-width: 376px) {
-    .hero h1 {
-        font-size: 1.7rem;
-    }
+  .hero h1 {
+      font-size: 1.7rem;
+  }
 
-    .hero-overlay {
-        padding: 2.5rem 3rem;
-    }
+  .hero-overlay {
+      padding: 2.5rem 3rem;
+  }
 }
 
 @media (min-width:  768px) {
