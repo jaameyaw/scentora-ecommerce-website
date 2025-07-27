@@ -41,10 +41,10 @@
 }
 
 .hero p {
-    color: #555;
-    font-family: var(--font-body);
-    line-height: 1.2rem;
-    margin-bottom: 2rem;
+  color: #5A5A5A;
+  font-family: var(--font-body);
+  line-height: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 .heroButton {
