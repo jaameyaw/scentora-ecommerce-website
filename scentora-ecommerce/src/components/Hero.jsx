@@ -14,7 +14,7 @@ export default function Hero() {
                     <span className="break-mobile"> Clean Spring </span>
                     <span className="break-desktop">Scents are Here!</span>
                 </h1>
-                <p>Luxury fragrances curated<br />for your uniqueness.</p> 
+                <p>Discover your future scent with Scentora.</p> 
                 <Button
                 className="heroButton"
                 onClick={() => navigate('/shop')}
