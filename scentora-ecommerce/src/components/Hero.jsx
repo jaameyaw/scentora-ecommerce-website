@@ -1,5 +1,6 @@
 
 import "./Hero.css";
+import '../App.css';
 import { useNavigate } from "react-router-dom";
 import Button from "./Button";
 
@@ -16,7 +17,7 @@ export default function Hero() {
                 </h1>
                 <p>Discover your future scent with Scentora.</p> 
                 <Button
-                className="heroButton"
+                className="Button"
                 onClick={() => navigate('/shop')}
                 label="Shop Now"
                 />
