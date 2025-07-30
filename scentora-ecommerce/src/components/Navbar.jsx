@@ -15,9 +15,9 @@ export default function Navbar() {
         <nav className="navbar">
             <div className="desktopMenu desktopLinks">
                 <Link to="/shop" className="link">Buy Perfumes</Link>
-                <Link to="/shop" className="link">Exclusive</Link>
-                <Link to="/shop" className="link">Men</Link>
-                <Link to="/shop" className="link">Women</Link>
+                <Link to="/shop/men" className="link">Men</Link>
+                <Link to="/shop/women" className="link">Women</Link>
+                <Link to="/shop/unisex" className="link">Unisex</Link>
             </div>
 
             <div className="logo">
@@ -29,11 +29,9 @@ export default function Navbar() {
             <div className="desktopMenu">
                 <Link to="/about" className="link">About</Link>
                 <a href="#contact" className="link">Contact</a>
-                <Link to="/cart" className="link">
-                    <button onClick={toggleCart} className="cartIconDesktop">
-                        <i className="fa-solid fa-cart-shopping"></i>
-                    </button>
-                </Link>
+                <button onClick={toggleCart} className="cartIconDesktop">
+                    <i className="fa-solid fa-cart-shopping"></i>
+                </button>
                 <i className="fas fa-user userIcon"></i>
             </div>
 
