@@ -20,3 +20,96 @@
   transform: scale(1.05);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3000;
+}
+
+.modal-overlay.show {
+    opacity: 1;
+}
+.modal-overlay.hide {
+    opacity: 0;
+}
+
+/* Base modal */
+.modal {
+    position: fixed;
+    background: white;
+    z-index: 3001;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+/* LEFT SLIDE */
+.modal-left {
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+}
+
+.modal-left.init {
+    transform: translateX(-100%);
+}
+.modal-left.show {
+    transform: translateX(0%);
+}
+.modal-left.hide {
+    transform: translateX(-100%);
+}
+
+/* RIGHT SLIDE */
+.modal-right {
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+}
+
+.modal-right.init {
+    transform: translateX(100%);
+}
+.modal-right.show {
+    transform: translateX(0%);
+}
+.modal-right.hide {
+    transform: translateX(100%);
+}
+
+/* CENTER MODAL (Optional fade + zoom) */
+.modal-center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-center.show {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+}
+.modal-center.hide {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
