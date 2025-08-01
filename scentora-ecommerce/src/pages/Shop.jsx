@@ -1,13 +1,50 @@
 
+import FilterModal from '../components/FilterModal';
 import { Link, useParams} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 
 
 
+
 export default function Shop() {
     const { category } = useParams();
-    const displayedPerfumes = category ? perfumes.filter(perfume => perfume.category === category) : perfumes;
+    const [showFilter, setShowFilter] = useState(false);
+    const [filters, setFilters] = useState({
+        price: [50, 500],
+        category: category || '',
+        tag: '',
+    });
+
+    const [filteredPerfumes, setFilteredPerfumes] = useState(perfumes);
+
+   
+    // If category changes from URL, update filters.category
+    useEffect(() => {
+        setFilters(prev => ({
+        ...prev,
+        category: category || ''
+        }));
+    }, [category]);
+
+    // Apply filtering logic
+    useEffect(() => {
+        const result = perfumes.filter((perfume) => {
+        const inPriceRange = perfume.price >= filters.price[0] && perfume.price <= filters.price[1];
+        const matchesCategory = (filters.category || category)
+            ? perfume.category === (filters.category || category)
+            : true;
+        const matchesTag = filters.tag ? perfume.tags.includes(filters.tag) : true;
+        return inPriceRange && matchesCategory && matchesTag;
+        });
+
+        setFilteredPerfumes(result);
+    }, [filters, category]);
+
+    const handleApplyFilters = () => {    
+        setFilters({ ...filters });
+    };
+
     return (
         <section className="shop">
             <div className="shop-header">
@@ -28,6 +65,14 @@ export default function Shop() {
                     <option>Price: High to Low</option>
                 </select>
             </div>
+            <FilterModal
+            isOpen={showFilter}
+            onClose={() => setShowFilter(false)}
+            filters={filters}
+            setFilters={setFilters}
+            onApply={handleApplyFilters}
+            />
+
 
     )
 
