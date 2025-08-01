@@ -74,5 +74,30 @@ export default function Shop() {
             />
 
 
+            <div className="product-grid">
+            {filteredPerfumes.length > 0 ? (
+                filteredPerfumes.map((perfume, id) => (
+                    <div className="product-card" key={id}>
+                        {perfume.salePrice && <span className="sale-badge">Sale!</span>}
+                        <img src={perfume.image} alt={perfume.name} />
+                        <p className="product-category">{perfume.category}</p>
+                        <h3 className="product-name">{perfume.name}</h3>
+                        <div className="price">
+                            {perfume.salePrice ? (
+                                <>
+                                    <span className="old-price">${perfume.price.toFixed(2)}</span>
+                                    <span className="new-price">${perfume.salePrice.toFixed(2)}</span>
+                                </>
+                            ) : (
+                                <span className="new-price">${perfume.price.toFixed(2)}</span>
+                            )}
+                        </div>
+                    </div>
+                ))
+            ) : (
+                <p className="no-products">No products found</p>
+            )}
+            </div>
+        </section>
     )
 
