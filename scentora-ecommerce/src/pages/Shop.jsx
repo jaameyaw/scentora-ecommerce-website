@@ -1,5 +1,6 @@
 
 import FilterModal from '../components/FilterModal';
+import { useState, useEffect } from 'react';
 import { Link, useParams} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
