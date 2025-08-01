@@ -10,6 +10,7 @@ import perfumes from '../perfumes';
 export default function Shop() {
     const { category } = useParams();
     const [showFilter, setShowFilter] = useState(false);
+    const [originalPerfumes, setOriginalPerfumes] = useState([]);
     const [filters, setFilters] = useState({
         price: [50, 500],
         category: category || '',
