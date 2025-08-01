@@ -39,11 +39,27 @@ export default function Shop() {
         });
 
         setFilteredPerfumes(result);
+        setOriginalPerfumes(result);
     }, [filters, category]);
 
     const handleApplyFilters = () => {    
         setFilters({ ...filters });
     };
+
+    const handleSorting = (e) => {
+        const value = e.target.value;
+        let sortedPerfumes;
+
+        if (value === 'low-to-high') {
+            sortedPerfumes = [...filteredPerfumes].sort((a, b) => a.price - b.price);
+        } else if (value === 'high-to-low') {
+            sortedPerfumes = [...filteredPerfumes].sort((a, b) => b.price - a.price);
+        } else if (value === 'default') {
+            sortedPerfumes = originalPerfumes;
+        }
+
+        setFilteredPerfumes(sortedPerfumes);
+    } 
 
     return (
         <section className="shop">
