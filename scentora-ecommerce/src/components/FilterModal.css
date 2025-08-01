@@ -1,0 +1,74 @@
+
+.filterOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.filterModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 80%;
+  max-width: 320px;
+  height: 100vh;
+  background: #fff;
+  padding: 2rem;
+  z-index: 1100;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.2);
+}
+
+.filterSection {
+  margin-bottom: 1.5rem;
+}
+
+.filterSection h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #1c1c1c;
+}
+
+.filterSection label {
+  display: block;
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+}
+
+.priceRange {
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.filterButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.clearBtn,
+.viewBtn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.clearBtn {
+  background: #e3e3e3;
+  color: #333;
+}
+
+.viewBtn {
+  background-color: var(--eerrie-black);
+  color: #fff;
+}
