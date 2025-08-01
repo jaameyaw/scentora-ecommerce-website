@@ -1,5 +1,3 @@
-
-
 .navbar {
   background-color: var( --bg-baby-powder);
   color: var(--eerrie-black);
@@ -48,7 +46,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 80%;
+  width: 100%;
   height: 100vh;
   background-color: white;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
@@ -65,12 +63,19 @@
   transform: translateX(0);
 }
 
+.closeSidebarBtn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
 
 .cartSidebar {
   position: fixed;
   top: 0;
   right: 0;
-  width: 80%;
+  width: 100%;
   height: 100vh;
   background-color: white;
   box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
@@ -125,7 +130,6 @@
   margin-top: 1rem;
 }
 
-
 @media (min-width: 1024px) {
   .navbarMobileActions {
     display: none;
@@ -137,22 +141,18 @@
     align-items: center;
   }
 
-  .cartIconDesktop, .userIcon {
+  .cartIconDesktop {
     cursor: pointer;
     background: none;
     border: none;
   }
 
-  .cartIconDesktop i, .userIcon{
+  .cartIconDesktop i {
     color: var(--eerrie-black);
     transition: color 0.3s ease;
   }
 
-  .userIcon, .cartIconDesktop i {
-    font-size: 1rem;
-  }
-
-  .cartIconDesktop i:hover, .userIcon:hover {
+  .cartIconDesktop i:hover {
     color: var(--gold);
   }
 
