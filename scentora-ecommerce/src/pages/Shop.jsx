@@ -69,7 +69,7 @@ export default function Shop() {
                 <p className="breadrumb">
                     <Link to="/">Home</Link> / 
                     <Link to="/shop">Shop</Link> 
-                    {category && <> / <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span></>}
+                    {category && ` / ${category.charAt(0).toUpperCase() + category.slice(1)}`}
                 </p>
 
                 <h1 className="shop-title">SHOP</h1>
@@ -121,3 +121,4 @@ export default function Shop() {
         </section>
     )
 
+};
