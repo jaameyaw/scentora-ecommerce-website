@@ -58,11 +58,13 @@ export default function Shop() {
             </div>
 
             <div className="shop-controls">
-                <p className="filter-label">☰ Filter Products</p>
-                <select className='short-select'>
-                    <option>Default sorting</option>
-                    <option>Price: Low to High</option>
-                    <option>Price: High to Low</option>
+                <button className="filter-button" onClick={() => setShowFilter(true)}>
+                    <i class="fa-solid fa-sliders"></i><span className="filter-text">Filter Products</span>
+                </button>
+                <select className='sort-select' onChange={handleSorting}>
+                    <option value="default">Default sorting</option>
+                    <option value="low-to-high">Price: Low to High</option>
+                    <option value="high-to-low">Price: High to Low</option>
                 </select>
             </div>
             <FilterModal
