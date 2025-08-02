@@ -8,6 +8,8 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
             category: '',
             tag: '',
         });
+
+        onApply();
     }
 
     const handleView = () => {
@@ -15,12 +17,15 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
         onClose();
     };
 
-    if (!isOpen) return null;
 
     return (
         <>
-            <div className="filterOverlay" onClick={onClose}></div>
-            <div className="filterModal">
+            <div className={`filterOverlay ${isOpen ? 'visible' : ''}`} onClick={onClose}></div>
+            <div className={`filterSidebar ${isOpen ? 'open' : ''}`}>
+                <button className="close-btn" onClick={onClose}>
+                    <i className="fas fa-times"></i>
+                </button>
+            <div className="filterSiderContent">
                 <h2>Filter Products</h2>
 
                 <div className="filterSection">
@@ -41,10 +46,10 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                     {['men', 'women', 'unisex'].map((cat) => (
                         <label key={cat}>
                             <input
-                            type="radio"
-                            name="category"
-                            checked={filters.category === cat}
-                            onChange={() => setFilters((prev) => ({ ...prev, category: cat }))}
+                                type="radio"
+                                name="category"
+                                checked={filters.category === cat}
+                                onChange={() => setFilters((prev) => ({ ...prev, category: cat }))}
                             />
                             {cat.charAt(0).toUpperCase() + cat.slice(1)}
                         </label>
@@ -68,10 +73,18 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
 
                 <div className="filterButtons">
                     <Button className="clear-button" onClick={handleClear} label="Clear All" />
-                    <Button className="apply-button" onClick={handleView} label="View" /> 
+                    <Button className="apply-button" onClick={handleView} label="View" />
                 </div>
+            </div>
+
+
+
+
+
+
+
+
             </div>
         </>
     )
-
 }
