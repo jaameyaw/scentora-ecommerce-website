@@ -36,18 +36,38 @@
   transform: translateX(0);
 }
 
-.close-btn {
-  background: transparent;
+.filterSiderbarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.filterSiderbarHeader h2 {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  color: var(--eerrie-black);
+}
+
+.filterSiderbarHeader .close-btn {
+  width: 30px;
+  height: 30px;
   border: none;
-  font-size: 1.5rem;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  cursor: pointer;
+  border-radius: 50%;
+  background: #f0f0f0;
   color: var(--dark-gray);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
   margin-bottom: 1.5rem;
+.close-btn:hover {
+  background: #e0e0e0;
+}
+
 }
 
 .filterSection h3 {
