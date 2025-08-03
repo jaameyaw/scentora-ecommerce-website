@@ -1,5 +1,7 @@
 import './FilterModal.css';
 import Button from './Button';
+import Slider from 'rc-slider';  
+import 'rc-slider/assets/index.css';
 
 export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply }) {
     const handleClear = () => {
@@ -15,6 +17,10 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
     const handleView = () => {
         onApply();
         onClose();
+    };
+
+    const handlePriceChange = (value) => {
+        setFilters((prev) => ({ ...prev, price: value }));
     };
 
 
@@ -33,15 +39,22 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                 <div className="filterSiderContent">
                     <div className="filterSection">
                         <h3 className='filterTitle'>Filter by Price</h3>
-                        <input
-                            type="range"
-                            min="50"
-                            max="500"
-                            step="5"
-                            value={filters.price[1]}
-                            onChange={(e) => setFilters((prev) => ({ ...prev, price: [50, Number(e.target.value)] }))}
-                        />
-                        <p className="priceRange">Up to ${filters.price[1]}</p>
+
+                            
+                            <Slider
+                                range
+                                min={50}
+                                max={500}
+                                step={5}
+                                value={filters.price}
+                                onChange={handlePriceChange}
+                                trackStyle={[{ backgroundColor: '#007bff' }]}
+                                handleStyle={[
+                                    { borderColor: '#007bff' },
+                                    { borderColor: '#007bff' },
+                                ]}
+                            />
+                        <p className="priceRange">{filters.price[0]} to ${filters.price[1]}</p>
                     </div>
 
                     <div className="filterSection">
