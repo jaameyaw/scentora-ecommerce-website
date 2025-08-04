@@ -26,7 +26,6 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
         }
     };
 
-
     return (
         <>
             <div className={`filterOverlay ${isOpen ? 'visible' : ''}`} onClick={onClose}></div>
@@ -69,6 +68,7 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                                 value={filters.price[1]}
                                 placeholder="500"
                             />
+
                         </div>
 
                     </div>
