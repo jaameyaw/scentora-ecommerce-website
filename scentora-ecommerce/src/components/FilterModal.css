@@ -94,37 +94,14 @@ input[type="radio"] {
   margin-right: 0.6rem;
 }
 
-input[type="range"] {
-  width: 100%;
-  margin-top: 0.5rem;
+.price-input-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.price-slider {
-  height: 6px;
-  background: #ddd;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-}
-
-.thumb {
-  height: 18px;
-  width: 18px;
-  background-color: #000;
-  border-radius: 50%;
-  cursor: grab;
-  margin-top: -6px;
-  border: 2px solid #fff;
-}
-
-.track {
-  background: #000;
-  height: 100%;
-}
-
-.priceRange {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+.to-text {
+  font-size: 1rem;
   color: #555;
   font-weight: 500;
 }

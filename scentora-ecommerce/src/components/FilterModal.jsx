@@ -56,8 +56,11 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                             }}
                         />
 
+                        <div className="price-input-group">
+                            <span className="to-text">to</span>
                             />
-                        <p className="priceRange">{filters.price[0]} to ${filters.price[1]}</p>
+                        </div>
+
                     </div>
 
                     <div className="filterSection">
