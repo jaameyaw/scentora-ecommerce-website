@@ -1,7 +1,6 @@
 import './FilterModal.css';
 import Button from './Button';
-import Slider from 'rc-slider';  
-import 'rc-slider/assets/index.css';
+import Slider from '@mui/material/Slider';
 
 export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply }) {
     const handleClear = () => {
@@ -19,8 +18,10 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
         onClose();
     };
 
-    const handlePriceChange = (value) => {
-        setFilters((prev) => ({ ...prev, price: value }));
+    const handlePriceChange = (event, newValue) => {
+        if (Array.isArray(newValue)) {
+            setFilters((prev) => ({ ...prev, price: newValue }));
+        }
     };
 
 
@@ -38,21 +39,23 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
 
                 <div className="filterSiderContent">
                     <div className="filterSection">
-                        <h3 className='filterTitle'>Filter by Price</h3>
+                        <h3>By Price</h3>
+                        <Slider
+                            value={filters.price}
+                            onChange={handlePriceChange}
+                            valueLabelDisplay="off"
+                            min={50}
+                            max={500}
+                            step={5}
+                            sx={{
+                                color: '#1C1C1C',
+                                '& .MuiSlider-thumb': {
+                                width: 17,  
+                                height: 17,
+                                },
+                            }}
+                        />
 
-                            
-                            <Slider
-                                range
-                                min={50}
-                                max={500}
-                                step={5}
-                                value={filters.price}
-                                onChange={handlePriceChange}
-                                trackStyle={[{ backgroundColor: '#007bff' }]}
-                                handleStyle={[
-                                    { borderColor: '#007bff' },
-                                    { borderColor: '#007bff' },
-                                ]}
                             />
                         <p className="priceRange">{filters.price[0]} to ${filters.price[1]}</p>
                     </div>
