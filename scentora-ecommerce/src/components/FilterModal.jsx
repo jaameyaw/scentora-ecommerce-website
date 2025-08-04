@@ -1,6 +1,8 @@
 import './FilterModal.css';
 import Button from './Button';
 import Slider from '@mui/material/Slider';
+import PriceBox from './PriceBox';
+
 
 export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply }) {
     const handleClear = () => {
@@ -57,7 +59,15 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                         />
 
                         <div className="price-input-group">
+                            <PriceBox 
+                                value={filters.price[0]}
+                                placeholder="50"
+                            />
                             <span className="to-text">to</span>
+
+                            <PriceBox
+                                value={filters.price[1]}
+                                placeholder="500"
                             />
                         </div>
 
