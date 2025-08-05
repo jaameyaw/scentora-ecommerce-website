@@ -1,5 +1,5 @@
 
-import FilterModal from '../components/FilterModal';
+import FilterSideBar from '../components/FilterSideBar';
 import { useState, useEffect } from 'react';
 import { Link, useParams} from 'react-router-dom';
 import './Shop.css';
