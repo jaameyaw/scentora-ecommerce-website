@@ -4,16 +4,7 @@ import Slider from '@mui/material/Slider';
 import PriceBox from './PriceBox';
 
 
-export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply }) {
-    const handleClear = () => {
-        setFilters({
-            price: [50, 500],
-            category: '',
-            tag: '',
-        });
-
-        onApply();
-    }
+export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply, onClear }) {
 
     const handleView = () => {
         onApply();
@@ -104,7 +95,7 @@ export default function FilterModal({ isOpen, onClose, filters, setFilters, onAp
                     </div>
 
                     <div className="filterButtons">
-                        <Button className="clear-button" onClick={handleClear} label="Clear All" />
+                        <Button className="clear-button" onClick={onClear} label="Clear All" />
                         <Button className="apply-button" onClick={handleView} label="View" />
                     </div>
                 </div>
