@@ -20,3 +20,23 @@
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
+.clearButton {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 9999px; 
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-body);
+  margin-bottom: 1.5rem;
+}
+
+.clearButton:hover {
+  background-color: #333;
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
