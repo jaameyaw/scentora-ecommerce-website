@@ -1,10 +1,10 @@
-import './FilterModal.css';
+import './FilterSideBar.css';
 import Button from './Button';
 import Slider from '@mui/material/Slider';
 import PriceBox from './PriceBox';
 
 
-export default function FilterModal({ isOpen, onClose, filters, setFilters, onApply, onClear }) {
+export default function FilterSideBar({ isOpen, onClose, filters, setFilters, onApply, onClear }) {
 
     const handleView = () => {
         onApply();
