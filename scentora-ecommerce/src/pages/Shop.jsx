@@ -101,6 +101,12 @@ export default function Shop() {
                     <option value="high-to-low">Price: High to Low</option>
                 </select>
             </div>
+
+            {isFilterActive() && 
+            <div>
+                <Button className="clearButton" label="Clear All" onClick={handleClear}/>    
+            </div>}
+            
             <FilterModal
             isOpen={showFilter}
             onClose={() => setShowFilter(false)}
