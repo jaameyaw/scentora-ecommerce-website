@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
+import Button from '../components/Button';
 
 
 
@@ -42,6 +43,7 @@ export default function Shop() {
 
         setFilteredPerfumes(result);
         setOriginalPerfumes(result);
+        
     }, [filters, category]);
 
     const handleApplyFilters = () => {    
