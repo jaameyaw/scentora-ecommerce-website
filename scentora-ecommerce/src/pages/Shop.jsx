@@ -63,6 +63,22 @@ export default function Shop() {
         setFilteredPerfumes(sortedPerfumes);
     } 
 
+    const isFilterActive = () => {
+        const defaultFilters = {
+            price: [50, 500],
+            category: '',
+            tag: '',
+        }
+
+        return (
+        filters.price[0] !== defaultFilters.price[0] ||
+        filters.price[1] !== defaultFilters.price[1] ||
+        filters.category !== defaultFilters.category ||
+        filters.tag !== defaultFilters.tag
+        );
+
+    }
+
     return (
         <section className="shop">
             <div className="shop-header">
