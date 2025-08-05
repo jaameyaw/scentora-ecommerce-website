@@ -81,6 +81,14 @@ export default function Shop() {
 
     }
 
+    const handleClear = () => {
+        setFilters({
+            price: [50, 500],
+            category: '',
+            tag: '',
+        });
+    }
+
     return (
         <section className="shop">
             <div className="shop-header">
@@ -115,6 +123,7 @@ export default function Shop() {
             filters={filters}
             setFilters={setFilters}
             onApply={handleApplyFilters}
+            onClear={handleClear}
             />
 
 
