@@ -117,11 +117,11 @@ export default function Shop() {
             </div>
 
             {isFilterActive() && 
-            <div>
+            <div className=''>
                 <Button className="clearButton" label="Clear All" onClick={handleClear}/>    
             </div>}
             
-            <FilterModal
+            <FilterSideBar
             isOpen={showFilter}
             onClose={() => setShowFilter(false)}
             filters={filters}
