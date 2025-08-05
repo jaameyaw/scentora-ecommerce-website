@@ -1,7 +1,7 @@
 
 import FilterSideBar from '../components/FilterSideBar';
 import { useState, useEffect } from 'react';
-import { Link, useParams} from 'react-router-dom';
+import { Link, useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
@@ -18,6 +18,7 @@ export default function Shop() {
         category: category || '',
         tag: '',
     });
+    const navigate = useNavigate();
 
     const [filteredPerfumes, setFilteredPerfumes] = useState(perfumes);
 
@@ -87,6 +88,9 @@ export default function Shop() {
             category: '',
             tag: '',
         });
+
+        navigate('/shop');
+    }
     }
 
     return (
