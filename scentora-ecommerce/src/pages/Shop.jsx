@@ -5,6 +5,7 @@ import { Link, useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
+import ProductDetails from './ProductDetails';
 
 
 
@@ -130,30 +131,41 @@ export default function Shop() {
             onClear={handleClear}
             />
 
-
+            
             <div className="product-grid">
-            {filteredPerfumes.length > 0 ? (
-                filteredPerfumes.map((perfume, id) => (
-                    <div className="product-card" key={id}>
-                        {perfume.salePrice && <span className="sale-badge">Sale!</span>}
-                        <img src={perfume.image} alt={perfume.name} />
-                        <p className="product-category">{perfume.category}</p>
-                        <h3 className="product-name">{perfume.name}</h3>
-                        <div className="price">
-                            {perfume.salePrice ? (
-                                <>
-                                    <span className="old-price">${perfume.price.toFixed(2)}</span>
-                                    <span className="new-price">${perfume.salePrice.toFixed(2)}</span>
-                                </>
-                            ) : (
-                                <span className="new-price">${perfume.price.toFixed(2)}</span>
-                            )}
+                {filteredPerfumes.length > 0 ? (
+                    filteredPerfumes.map((perfume, id) => (
+                        <div className="product-card" key={id}>
+                            {perfume.salePrice && <span className="sale-badge">Sale!</span>}
+                            <img src={perfume.image} alt={perfume.name} />
+                            <p className="product-category">{perfume.category}</p>
+                            <h3 className="product-name">{perfume.name}</h3>
+                            <div className="product-rating">
+                                {Array(5)
+                                    .fill()
+                                    .map((_, i) => (
+                                    <i key={i} className="fa-regular fa-star star-icon"></i>
+                                ))}
+                            </div>
+                            <div className="price">
+                                {perfume.salePrice ? (
+                                    <>
+                                        <span className="old-price">${perfume.price.toFixed(2)}</span>
+                                        <span className="new-price">${perfume.salePrice.toFixed(2)}</span>
+                                    </>
+                                ) : (
+                                    <span className="new-price">${perfume.price.toFixed(2)}</span>
+                                )}
+                                
+                            </div>
+
+                            <Link to={`/product/${perfume.slug}`}>View</Link>
+
                         </div>
-                    </div>
-                ))
-            ) : (
-                <p className="no-products">No products found</p>
-            )}
+                    ))
+                ) : (
+                    <p className="no-products">No products found</p>
+                )}
             </div>
         </section>
     )
