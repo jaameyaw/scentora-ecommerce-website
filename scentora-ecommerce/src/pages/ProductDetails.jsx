@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import perfumes from "../perfumes";
 
+import './ProductDetails.css';
 
 export default function ProductDetails() {
     const { slug } = useParams()
