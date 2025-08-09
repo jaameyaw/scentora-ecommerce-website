@@ -15,9 +15,16 @@ export default function ProductDetails() {
 
     return (
         <div className="product-details">
-            <img src={product.image} alt={product.title} />
-            <h1>{product.name}</h1>
-                <div className="price">
+            <div className="main-image">
+                {product.salePrice && <span className="sale-badge">Sale!</span>}
+                <img src={product.image} alt={product.name} />
+            </div>
+           
+            <div className="product-info">
+                <h1>{product.name}</h1>
+                <p className="product-category">Perfume for {product.category}</p>
+
+                <div className="price product-price">
                     {product.salePrice ? (
                         <>
                             <span className="old-price">${product.price.toFixed(2)}</span>
@@ -26,7 +33,17 @@ export default function ProductDetails() {
                     ) : (
                         <span className="new-price">${product.price.toFixed(2)}</span>
                     )}
-                    
+                    <span className="free-shipping"> + Free Shipping</span>
+
+                    <p className="description">{product.description}</p>
+                </div>
+
+
+                <div className="quantity">
+                    <h3>Quantity: </h3>
+                    <button>-</button>
+                    <input type="number" value='1' readOnly />
+                    <button>+</button>
                 </div>
             <p>{product.category}</p>
             {/* Add more info here */}
