@@ -45,8 +45,19 @@ export default function ProductDetails() {
                     <input type="number" value='1' readOnly />
                     <button>+</button>
                 </div>
-            <p>{product.category}</p>
-            {/* Add more info here */}
+
+                <button className="add-to-cart">ADD TO CART</button>
+
+                <div className="safe-checkout">
+                    <p>Guaranteed Safe Checkout</p>
+                    <div className="payment-icons">
+                        <img src= {mastercard} alt="visaCard" />
+                        <img src= {paypal} alt="paypal card" />
+                        <img src= {discover} alt="discover card" />
+                        <img src= {mtnMomo} alt="mtn momo" />
+                        <img src= {americanExpress} alt="american express card" />
+                    </div>
+                </div>
         </div>
     )
 }
