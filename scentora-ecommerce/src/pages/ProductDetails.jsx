@@ -18,30 +18,30 @@ export default function ProductDetails() {
 
 
     return (
-        <div className="product-details">
-            <div className="main-image">
-                {product.salePrice && <span className="sale-badge">Sale!</span>}
-                <img src={product.image} alt={product.name} />
-            </div>
-           
-            <div className="product-info">
-                <h1>{product.name}</h1>
-                <p className="product-category">Perfume for {product.category}</p>
-
-                <div className="price product-price">
-                    {product.salePrice ? (
-                        <>
-                            <span className="old-price">${product.price.toFixed(2)}</span>
-                            <span className="new-price">${product.salePrice.toFixed(2)}</span>
-                        </>
-                    ) : (
-                        <span className="new-price">${product.price.toFixed(2)}</span>
-                    )}
-                    <span className="free-shipping"> + Free Shipping</span>
-
-                    <p className="description">{product.description}</p>
+        <section className="product-details-section">
+            <div className="product-details">
+                <div className="main-image">
+                    {product.salePrice && <span className="sale-badge">Sale!</span>}
+                    <img src={product.image} alt={product.name} />
                 </div>
+            
+                <div className="product-info">
+                    <h1>{product.name}</h1>
+                    <p className="product-category">Perfume for {product.category}</p>
 
+                    <div className="price product-price">
+                        {product.salePrice ? (
+                            <>
+                                <span className="old-price">${product.price.toFixed(2)}</span>
+                                <span className="new-price">${product.salePrice.toFixed(2)}</span>
+                            </>
+                        ) : (
+                            <span className="new-price">${product.price.toFixed(2)}</span>
+                        )}
+                        <span className="free-shipping"> + Free Shipping</span>
+
+                        <p className="description">{product.description}</p>
+                    </div>
 
                 <div className="quantity">
                     <h3>Quantity: </h3>
