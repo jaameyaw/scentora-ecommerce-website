@@ -69,7 +69,18 @@ export default function ProductDetails() {
                             <i class="fa-regular fa-heart"></i>
                         </Button>
                     </div>
+
+                    <ul className="guarantees">
+                        <li>✔ No-Risk Money Back Guarantee!</li>
+                        <li>✔ No Hassle Refunds</li>
+                        <li>✔ Secure Payments</li>
+                    </ul>
                 </div>
-        </div>
+                
+
+                
+            </div>
+        </section>
+
     )
 }
