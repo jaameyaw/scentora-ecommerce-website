@@ -43,14 +43,14 @@ export default function ProductDetails() {
                         <p className="description">{product.description}</p>
                     </div>
 
-                <div className="quantity">
-                    <h3>Quantity: </h3>
-                    <button>-</button>
-                    <input type="number" value='1' readOnly />
-                    <button>+</button>
-                </div>
 
-                <button className="add-to-cart">ADD TO CART</button>
+                    <div className="quantity">
+                        <h3>Quantity: {count}</h3>
+                        <div className="quantity-selector">
+                            <button onClick={decrementQty}>-</button>
+                            <div className="number">{count}</div>
+                            <button onClick={incrementQty}>+</button>
+                        </div>
 
                 <div className="safe-checkout">
                     <p>Guaranteed Safe Checkout</p>
