@@ -52,14 +52,6 @@ export default function ProductDetails() {
                             <button onClick={incrementQty}>+</button>
                         </div>
 
-                <div className="safe-checkout">
-                    <p>Guaranteed Safe Checkout</p>
-                    <div className="payment-icons">
-                        <img src= {mastercard} alt="visaCard" />
-                        <img src= {paypal} alt="paypal card" />
-                        <img src= {discover} alt="discover card" />
-                        <img src= {mtnMomo} alt="mtn momo" />
-                        <img src= {americanExpress} alt="american express card" />
                     </div>
                 </div>
         </div>
