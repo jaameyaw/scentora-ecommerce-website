@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import perfumes from "../perfumes";
 import './ProductDetails.css';
+import Button  from '../components/Button';
 import { useState } from "react";
 import mastercard from '../assets/payment-icons/visa.png';
 import paypal from '../assets/payment-icons/paypal.png';
@@ -59,6 +60,14 @@ export default function ProductDetails() {
                             <button onClick={incrementQty}>+</button>
                         </div>
 
+                    </div>
+
+                    <div className="product-buttons">
+                        <Button className="ButtonOne">add to cart</Button>
+                        <Button className="ButtonTwo">buy now</Button>
+                        <Button className="button-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </Button>
                     </div>
                 </div>
         </div>
