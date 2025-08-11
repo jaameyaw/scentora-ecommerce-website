@@ -2,6 +2,7 @@
 import { useParams } from "react-router-dom";
 import perfumes from "../perfumes";
 import './ProductDetails.css';
+import { useState } from "react";
 import mastercard from '../assets/payment-icons/visa.png';
 import paypal from '../assets/payment-icons/paypal.png';
 import discover from '../assets/payment-icons/discover.png';
@@ -9,6 +10,8 @@ import americanExpress from '../assets/payment-icons/american-express.png';
 import mtnMomo from '../assets/payment-icons/mtn-momo.png'
 
 export default function ProductDetails() {
+    const [count, setCount] = useState(1);
+
     const { slug } = useParams()
        const product = perfumes.find(p => p.slug === slug);
 
