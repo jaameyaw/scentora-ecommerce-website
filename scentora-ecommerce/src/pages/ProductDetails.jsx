@@ -16,6 +16,10 @@ export default function ProductDetails() {
         return <p>Product not found</p>;
     }
 
+    const incrementQty = () => {setCount(prev => prev + 1) }
+    const decrementQty = () => {setCount(  (prev  => prev > 1? prev - 1: 1) ) }
+
+
 
     return (
         <section className="product-details-section">
