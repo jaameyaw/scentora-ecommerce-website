@@ -95,8 +95,8 @@ export default function FilterSideBar({ isOpen, onClose, filters, setFilters, on
                     </div>
 
                     <div className="filterButtons">
-                        <Button className="clear-button" onClick={onClear} label="Clear All" />
-                        <Button className="apply-button" onClick={handleView} label="View" />
+                        <Button className="clear-button" onClick={onClear}> Clear All </Button>
+                        <Button className="apply-button" onClick={handleView}> View </Button>
                     </div>
                 </div>
 
