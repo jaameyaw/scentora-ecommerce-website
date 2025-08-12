@@ -40,3 +40,48 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
+.ButtonOne {
+  padding: 0.75rem 1.35em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--gold); 
+  color: var(--eerrie-black);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+
+.ButtonTwo {
+  padding: 0.75rem 1.35em;
+  font-family: var(--font-body);
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background-color: var(--eerrie-black); 
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ButtonOne:hover, .ButtonTwo:hover, .button-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+}
