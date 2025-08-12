@@ -19,8 +19,7 @@ export default function PerfumeofTheWeek() {
                     <Button
                     className="Button"
                     onClick={() => navigate('/shop')}
-                    label="Buy Now"
-                    />
+                    > Buy Now </Button>
 
                 </div>
 
