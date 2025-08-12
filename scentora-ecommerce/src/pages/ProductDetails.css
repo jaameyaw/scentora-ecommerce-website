@@ -1,9 +1,14 @@
 
+
+.product-details-section {
+  padding: 4rem 1rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
 .product-details {
-  margin-top: 4rem;  
   display: flex;
   gap: 3rem;
-  padding: 2rem;
   flex-wrap: wrap;
 }
 
