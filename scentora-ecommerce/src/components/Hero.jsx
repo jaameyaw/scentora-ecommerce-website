@@ -19,8 +19,7 @@ export default function Hero() {
                 <Button
                 className="Button"
                 onClick={() => navigate('/shop')}
-                label="Shop Now"
-                />
+                > Shop Now </Button>
             </div>
         </section>
     )
