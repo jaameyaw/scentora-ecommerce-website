@@ -35,7 +35,7 @@ export default function ProductDetails() {
             
                 <div className="product-info">
                     <h1>{product.name}</h1>
-                    <p className="product-category">Perfume for {product.category}</p>
+                    <p className="perfume-category">Perfume for {product.category}</p>
 
                     <div className="price product-price">
                         {product.salePrice ? (
