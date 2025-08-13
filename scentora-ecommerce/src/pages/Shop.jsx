@@ -5,7 +5,6 @@ import { Link, useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
-import ProductDetails from './ProductDetails';
 
 
 
@@ -92,7 +91,6 @@ export default function Shop() {
 
         navigate('/shop');
     }
-    }
 
     return (
         <section className="shop">
@@ -119,7 +117,7 @@ export default function Shop() {
 
             {isFilterActive() && 
             <div className=''>
-                <Button className="clearButton" label="Clear All" onClick={handleClear}/>    
+                <Button className="clearButton" onClick={handleClear}>Clear All</Button>    
             </div>}
             
             <FilterSideBar
