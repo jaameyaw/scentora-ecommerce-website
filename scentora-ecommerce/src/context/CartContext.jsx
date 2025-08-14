@@ -36,6 +36,7 @@ export function CartProvider ({children}) {
         )
     }
 
+    // calculating the total in terms of quantity
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
 
