@@ -8,18 +8,18 @@ import { CartContext } from "../context/CartContext";
 
 
 export default function ProductDetails() {
-    const [count, setCount] = useState(1);
     const { addToCart } = useContext(CartContext);
+    const [quantity, setQuantity] = useState(1);
 
     const { slug } = useParams()
-       const product = perfumes.find(p => p.slug === slug);
+    const product = perfumes.find(p => p.slug === slug);
 
     if (!product) {
         return <p>Product not found</p>;
     }
 
-    const incrementQty = () => {setCount(prev => prev + 1) }
-    const decrementQty = () => {setCount(  (prev  => prev > 1? prev - 1: 1) ) }
+    const incrementQty = () => {setQuantity(prev => prev + 1) }
+    const decrementQty = () => {setQuantity(  (prev  => prev > 1? prev - 1: 1) ) }
 
 
 
@@ -51,20 +51,20 @@ export default function ProductDetails() {
 
 
                     <div className="quantity">
-                        <h3>Quantity: {count}</h3>
+                        <h3>Quantity: {quantity}</h3>
                         <div className="quantity-selector">
                             <button onClick={decrementQty}>-</button>
-                            <div className="number">{count}</div>
+                            <div className="number">{quantity}</div>
                             <button onClick={incrementQty}>+</button>
                         </div>
 
                     </div>
 
                     <div className="product-buttons">
-                        <Button className="ButtonOne">add to cart</Button>
+                        <Button className="ButtonOne" onClick={() => addToCart(product, quantity)}>add to cart</Button>
                         <Button className="ButtonTwo">buy now</Button>
                         <Button className="button-icon">
-                            <i class="fa-regular fa-heart"></i>
+                            <i className="fa-regular fa-heart"></i>
                         </Button>
                     </div>
 
