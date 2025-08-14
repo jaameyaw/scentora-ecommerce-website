@@ -1,9 +1,11 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 import "./Navbar.css";
 import '../App.css';
 
 export default function Navbar() {
+    const { cartCount } = useContext(CartContext);
     const [isOpen, setIsOpen] = useState(false);
     const [cartOpen, setCartOpen] = useState(false);
     const toggleSidebar = () => setIsOpen(!isOpen);
