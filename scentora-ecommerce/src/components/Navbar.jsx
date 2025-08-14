@@ -31,20 +31,24 @@ export default function Navbar() {
             <div className="desktopMenu">
                 <Link to="/about" className="link">About</Link>
                 <a href="#contact" className="link">Contact</a>
-                <button  onClick={toggleCart} className="cartIconDesktop">
-                    <i className="fa-solid fa-cart-shopping"></i>
+                <button onClick={toggleCart} className="cartIconDesktop">
+                    <img src="/images/shopping-cart.png" alt='shopping bag' />
+                    <span className="cart-count">{cartCount}</span>
                 </button>
                 <i className="fas fa-user userIcon"></i>
             </div>
 
 
             <div className="navbarMobileActions">
+                <button onClick={toggleCart} className="cartIconMobile">
+                    <img src="/images/shopping-cart.png" alt='shopping bag' />
+                    <span className="cart-count">{cartCount}</span>
+                </button>
+                
                 <button onClick={toggleSidebar} className="hamburger">
                     <i className='fas fa-bars'></i>
                 </button>
-                <button  onClick={toggleCart} className="cartIconDesktop">
-                    <i className="fa-solid fa-cart-shopping"></i>
-                </button>
+
             </div>
 
         </nav>
