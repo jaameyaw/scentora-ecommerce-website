@@ -36,6 +36,7 @@ export function CartProvider ({children}) {
         )
     }
 
+    const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
     const value = { cart, setCart, addToCart, removeFromCart, updateQuantity}
 
