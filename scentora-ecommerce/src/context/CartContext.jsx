@@ -6,17 +6,20 @@ export function CartProvider ({children}) {
 
     const [cart, setCart] = useState([]);
 
-    const addToCart = (product) => {
+    const addToCart = (product, quantity = 1) => {
         setCart((prevCart) => {
-            const existingProduct = prevCart.find((cartProduct) => cartProduct.id === product.id);
+            const existingProduct = prevCart.find((cartProduct) =>
+                cartProduct.id === product.id
+            );
+
             if (existingProduct) {
                 return prevCart.map((cartProduct) =>
                     cartProduct.id === product.id
-                    ? {...cartProduct, quantity: cartProduct.quantity + 1} 
+                    ? {...cartProduct, quantity: cartProduct.quantity + quantity} 
                     : cartProduct   
                 ); 
             } else {
-                return [...prevCart, { ...product, quantity: 1 }]; 
+                return [...prevCart, { ...product, quantity }]; 
             }
         })
     }
