@@ -3,11 +3,13 @@ import { useParams } from "react-router-dom";
 import perfumes from "../perfumes";
 import './ProductDetails.css';
 import Button  from '../components/Button';
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 export default function ProductDetails() {
     const [count, setCount] = useState(1);
+    const { addToCart } = useContext(CartContext);
 
     const { slug } = useParams()
        const product = perfumes.find(p => p.slug === slug);
