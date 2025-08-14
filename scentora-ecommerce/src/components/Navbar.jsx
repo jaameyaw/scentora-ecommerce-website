@@ -79,8 +79,8 @@ export default function Navbar() {
                 <div className="cartSidebarItems">
                     <p className="cartSidebarEmptyText">Your cart is empty</p>
 
-                    <button className="startShoppingBtn" onClick={() => { toggleCart(); navigate('/shop'); }}>
-                        START SHOPPING
+                    <button className="startShoppingBtn" onClick={() => { toggleCart(); navigate('/cart'); }}>
+                        View Cart
                     </button>                    
                 </div>   
                 
