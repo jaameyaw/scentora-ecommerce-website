@@ -7,10 +7,11 @@ import './Cart.css';
 const Cart = () => {
     const { cart, cartCount, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
 
-export default function Cart() {
     return (
-        <>
-            <h1>Cart</h1>
-        </>
+        <section className="cart">
+            <Breadcrumbs aria-label="breadcrumb" separator="›" >
+                <Link href="/" underline="hover" color='inherit'>Home</Link>
+                <Link href="/cart" underline='hover' color='inherit'>Cart</Link>
+            </Breadcrumbs>
     )
 }
