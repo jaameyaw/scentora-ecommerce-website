@@ -51,20 +51,24 @@ const Cart = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div className="cart-price">
-                                        {item.salePrice ? (
-                                            <>
-                                                <span className="old-price">${item.price.toFixed(2)}</span><br />
-                                                <span className="new-price">${item.salePrice.toFixed(2)}</span>
-                                            </>
-                                        ) : (
-                                            <span className="new-price">${item.price.toFixed(2)}</span>
-                                        )}
+                                        <div className="cart-price">
+                                                <div>
+                                                    {item.salePrice ? (
+                                                        <>
+                                                            <span className="cart-new-price">${item.salePrice.toFixed(2)}</span><br />
+                                                            <span className="cart-old-price">${item.price.toFixed(2)}</span>
+                                                        </>
 
-                                        <p className="wishlist">Add To Wishlist ♡</p>
+                                                    ) : (
+                                                        <span className="cart-new-price">${item.price.toFixed(2)}</span>
+                                                    )}
+
+                                                </div>
+
+                                            <p className="wishlist">Add To Wishlist ♡</p>
+                                        </div>
+
                                     </div>
-                                    
 
                                 </div>
                             ))
