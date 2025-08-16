@@ -42,12 +42,13 @@ const Cart = () => {
                                         <div className="cart-item-details">
                                             <h3>{item.name}</h3>
 
-                                        <div className="cart-quantity-wrapper">
-                                            <h4>Quantity</h4>
-                                            <div className="cart-quantity">
-                                                <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-                                                <span>{item.quantity}</span>
-                                                <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                                            <div className="cart-quantity-wrapper">
+                                                <h4>Quantity</h4>
+                                                <div className="quantity-selector">
+                                                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                                                    <span>{item.quantity}</span>
+                                                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
