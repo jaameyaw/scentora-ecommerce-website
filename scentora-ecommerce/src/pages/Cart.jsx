@@ -1,11 +1,14 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
+import Button from '../components/Button';
 import './Cart.css';
 
 const Cart = () => {
     const { cart, cartCount, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
+    const navigate = useNavigate();
 
     return (
         <section className="cart">
@@ -29,7 +32,13 @@ const Cart = () => {
                                 <h3>Products</h3>
                             </div>
                             {cart.length === 0 ? (
-                                <p>Your cart is empty.</p>
+                                <div className="cart-empty">
+                                    <p className> Your cart is currently empty.</p>
+                                    <Button className='ButtonTwo' onClick={() => navigate('/shop')}>
+                                        Return to Shop
+                                    </Button>
+                                </div>
+
                             ): (
                                 cart.map((item) => (
                                     <div key={item.id} className="cart-item">
