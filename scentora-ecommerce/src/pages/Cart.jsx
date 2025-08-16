@@ -23,18 +23,24 @@ const Cart = () => {
                 </div>
 
                 <div className="card-product-container">
-                    <div className="card-products">
-                        {cart.length === 0 ? (
-                            <p>Your cart is empty.</p>
-                        ): (
-                            cart.map((item) => (
-                                <div key={item.id} className="cart-item">
-                                    <button className="close-icon" onClick={() => removeFromCart(item.id)}>
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                    <img src={item.image} alt={item.name} className="cart-item-img" />
-                                    <div className="cart-item-details">
-                                        <h3>{item.name}</h3>
+                    <div className="cart-products"> 
+                        <div className="cart-layout">
+                            <div className="cart-item-heading">
+                                <h3>Products</h3>
+                            </div>
+                            {cart.length === 0 ? (
+                                <p>Your cart is empty.</p>
+                            ): (
+                                cart.map((item) => (
+                                    <div key={item.id} className="cart-item">
+                                        <button className="close-icon" onClick={() => removeFromCart(item.id)}>
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </button>
+                                        <div className='item-image-wrapper'>
+                                            <img src={item.image} alt={item.name} className="cart-item-img" />
+                                        </div>
+                                        <div className="cart-item-details">
+                                            <h3>{item.name}</h3>
 
                                         <div className="cart-quantity-wrapper">
                                             <h4>Quantity</h4>
