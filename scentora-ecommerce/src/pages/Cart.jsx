@@ -16,8 +16,10 @@ const Cart = () => {
  
             <div className="cart-container">
                 <div className="cart-header">
-                    <img src="/images/shopping-bag.png" />
-                    <h2>Your Cart ({cartCount} items)</h2>
+                    <div className="img-wrapper">
+                        <img src="/images/shopping-bag.png" />
+                    </div>
+                    <h1>Your Cart ({cartCount} items)</h1>
                 </div>
 
                 <div className="card-product-container">
