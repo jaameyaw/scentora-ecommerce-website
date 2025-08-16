@@ -43,5 +43,29 @@ const Cart = () => {
                                             </div>
                                         </div>
                                     </div>
+                                    <div className="cart-price">
+                                        {item.salePrice ? (
+                                            <>
+                                                <span className="old-price">${item.price.toFixed(2)}</span><br />
+                                                <span className="new-price">${item.salePrice.toFixed(2)}</span>
+                                            </>
+                                        ) : (
+                                            <span className="new-price">${item.price.toFixed(2)}</span>
+                                        )}
+
+                                        <p className="wishlist">Add To Wishlist ♡</p>
+                                    </div>
+                                    
+
+                                </div>
+                            ))
+                        )}
+                    </div>
+                </div>
+            </div>
+
+        </section>
     )
 }
+
+export default Cart;
