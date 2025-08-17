@@ -256,3 +256,15 @@
     padding-bottom: 5px;
   }
 }
+
+@media (min-width: 1440px) {
+  .item-image-wrapper img{
+    width: 200px;
+  }
+  .cart-layout {
+    width: 70%;
+  }
+  .cart-wrapper {
+    padding-left: 4rem;
+  }
+}
