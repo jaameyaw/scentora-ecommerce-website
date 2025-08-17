@@ -21,6 +21,7 @@
 
 .cart-header {
   display: flex;
+  gap: 0.7rem;
 }
 
 .img-wrapper img {
@@ -61,8 +62,8 @@
 
 .cart-item {
   display: flex;
-  gap: 2rem;
-  padding: 15px;
+  gap: 1rem;
+  padding: 10px;
 }
 
 .close-icon {
@@ -79,7 +80,7 @@
 }
 
 .item-image-wrapper img{
-  width: 200px;
+  width: 120px;
   height: auto;
 }
 
