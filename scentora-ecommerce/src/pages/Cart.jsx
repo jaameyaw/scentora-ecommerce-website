@@ -87,9 +87,27 @@ const Cart = () => {
                             )}
                         </div>
 
-                                </div>
-                            ))
-                        )}
+
+                        <div className="cart-summary">
+                            <h3>Cart Summary</h3>
+
+                            <div className="summary-row">
+                                <span>SubTotal</span>
+                                <span className='cart-summary-value' >${cartTotal.toFixed(2)}</span>
+                            </div>
+
+                            <div className="summary-row">
+                                <span>Shipping</span>
+                                <span className='cart-summary-value'>FREE</span>
+                            </div>
+
+                            <div className="summary-row">
+                                <span>SubTotal</span>
+                                <span className='cart-summary-value'>${cartTotal.toFixed(2)}</span>
+                            </div>
+
+                            <Button className="ButtonOne width">Checkout</Button>
+                        </div>
                     </div>
                 </div>
             </div>
