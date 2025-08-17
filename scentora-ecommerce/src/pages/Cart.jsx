@@ -48,36 +48,44 @@ const Cart = () => {
                                         <div className='item-image-wrapper'>
                                             <img src={item.image} alt={item.name} className="cart-item-img" />
                                         </div>
-                                        <div className="cart-item-details">
-                                            <h3>{item.name}</h3>
+                                        <div className='cart-wrapper'>
+                                            <div className="cart-item-details">
+                                                <h3>{item.name}</h3>
 
-                                            <div className="cart-quantity-wrapper">
-                                                <h4>Quantity</h4>
-                                                <div className="quantity-selector">
-                                                    <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
-                                                    <span>{item.quantity}</span>
-                                                    <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                                                <div className="cart-quantity-wrapper">
+                                                    <h4>Quantity</h4>
+                                                    <div className="quantity-selector">
+                                                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
+                                                        <span>{item.quantity}</span>
+                                                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
+                                                    </div>
                                                 </div>
                                             </div>
+
+                                            <div className="cart-price">
+                                                    <div>
+                                                        {item.salePrice ? (
+                                                            <>
+                                                                <span className="cart-new-price">${item.salePrice.toFixed(2)}</span>
+                                                                <span className="cart-old-price">${item.price.toFixed(2)}</span>
+                                                            </>
+
+                                                        ) : (
+                                                            <span className="cart-new-price">${item.price.toFixed(2)}</span>
+                                                        )}
+
+                                                    </div>
+
+                                                    <p className="wishlist">Add To Wishlist ♡</p>
+                                            </div>
                                         </div>
-                                        <div className="cart-price">
-                                                <div>
-                                                    {item.salePrice ? (
-                                                        <>
-                                                            <span className="cart-new-price">${item.salePrice.toFixed(2)}</span><br />
-                                                            <span className="cart-old-price">${item.price.toFixed(2)}</span>
-                                                        </>
 
-                                                    ) : (
-                                                        <span className="cart-new-price">${item.price.toFixed(2)}</span>
-                                                    )}
 
-                                                </div>
-
-                                            <p className="wishlist">Add To Wishlist ♡</p>
-                                        </div>
 
                                     </div>
+                                ))
+                            )}
+                        </div>
 
                                 </div>
                             ))
