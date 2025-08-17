@@ -112,6 +112,11 @@
   text-align: right;
 }
 
+.cart-price div {
+  display: flex;
+  flex-direction: column;
+}
+
 .cart-new-price {
   font-size: 16px;
   font-weight: 600;
