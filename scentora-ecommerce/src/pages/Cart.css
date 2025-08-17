@@ -152,4 +152,38 @@
   color: #111;
 }
 
+.cart-summary {
+  width: 350px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+}
+
+.cart-summary h3 {
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 19px;
+  padding-bottom: 15px;
+  
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 9px 0;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-body);
+  color: #333;
+}
+
+.cart-summary-value {
+  font-weight: 550;
+  color: var(--errie-black);
+}
+
+.width {
+  width: 100%;
+  margin-top: 9px;
+}
+
 
