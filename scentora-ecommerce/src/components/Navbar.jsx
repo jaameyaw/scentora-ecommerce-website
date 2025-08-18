@@ -1,6 +1,8 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import CartSideBar from "./CartSideBar";
+import CartContent from "./CartContent";
 import "./Navbar.css";
 import '../App.css';
 
@@ -10,8 +12,8 @@ export default function Navbar() {
     const [cartOpen, setCartOpen] = useState(false);
     const toggleSidebar = () => setIsOpen(!isOpen);
     const toggleCart = () => setCartOpen(!cartOpen);
-
     const navigate = useNavigate();
+
     return (
     <>
         <nav className="navbar">
@@ -67,27 +69,12 @@ export default function Navbar() {
             <a href="#contact" className="link" onClick={toggleSidebar}>Contact</a>
         </div>
 
-        <div className={`cartSidebar ${cartOpen ? "cartOpen" : ''}`}>
-            <div>
-                <div className="cartSidebarHeader">
-                    <h3><i className="fas fa-shopping-bag"></i> CART</h3>
-                    <button onClick={toggleCart} className="cartSidebarCloseBtn">
-                        <i className="fas fa-times"></i>
-                    </button>
-                </div>
-
-                <div className="cartSidebarItems">
-                    <p className="cartSidebarEmptyText">Your cart is empty</p>
-
-                    <button className="startShoppingBtn" onClick={() => { toggleCart(); navigate('/cart'); }}>
-                        View Cart
-                    </button>                    
-                </div>   
-                
-            </div>
-
-
-        </div>
+        <CartSideBar  
+            isOpen={cartOpen}
+            onClose = {() => setCartOpen(false)}        
+        > 
+            <CartContent variant='sidebar' onNavigate={navigate} showSummary = {false}/>
+        </CartSideBar>
     </>
     )
 }
