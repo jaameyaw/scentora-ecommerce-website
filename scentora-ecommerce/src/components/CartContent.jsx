@@ -23,8 +23,8 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
 
                     ): (
                         cart.map((item) => (
-                            <div key={item.id} className={`cart-item ${variant}`}>
-                                <button className="close-icon" onClick={() => removeFromCart(item.id)}>
+                            <div key={item.id} className={`cart-item`}>
+                                <button className="icon-btn" onClick={() => removeFromCart(item.id)}>
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                                 <div className={`item-image-wrapper`}>
