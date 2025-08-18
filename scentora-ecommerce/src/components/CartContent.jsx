@@ -7,9 +7,9 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
     const { cart, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
 
     return (
-        <div className={`card-product-container ${variant}`}>
+        <div className={`cart-product-container ${variant}`}>
             <div className="cart-products"> 
-                <div className= {`cart-layout ${variant}`}>
+                <div className= {`cart-layout`}>
                     <div className="cart-item-heading">
                         <h3>Products</h3>
                     </div>
@@ -27,16 +27,16 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
                                 <button className="close-icon" onClick={() => removeFromCart(item.id)}>
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
-                                <div className='item-image-wrapper'>
-                                    <img src={item.image} alt={item.name} className="cart-item-img" />
+                                <div className={`item-image-wrapper`}>
+                                    <img src={item.image} alt={item.name} className={`cart-item-img`} />
                                 </div>
-                                <div className='cart-wrapper'>
-                                    <div className="cart-item-details">
+                                <div className={`cart-wrapper`}>
+                                    <div className={`cart-item-details`}>
                                         <h3>{item.name}</h3>
 
-                                        <div className="cart-quantity-wrapper">
+                                        <div className={`cart-quantity-wrapper`}>
                                             <h4>Quantity</h4>
-                                            <div className="quantity-selector">
+                                            <div className={`quantity-selector`}>
                                                 <button onClick={() => updateQuantity(item.id, item.quantity - 1)}>-</button>
                                                 <span>{item.quantity}</span>
                                                 <button onClick={() => updateQuantity(item.id, item.quantity + 1)}>+</button>
@@ -44,19 +44,21 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
                                         </div>
                                     </div>
 
-                                    <div className="cart-price">
-                                            <div>
-                                                {item.salePrice ? (
-                                                    <>
-                                                        <span className="cart-new-price">${item.salePrice.toFixed(2)}</span>
-                                                        <span className="cart-old-price">${item.price.toFixed(2)}</span>
-                                                    </>
+                                    <div className={`cart-price`}>
+                                        <div>
+                                            {item.salePrice ? (
+                                                <>
+                                                    <span className="cart-new-price">${item.salePrice.toFixed(2)}</span>
+                                                    <span className="cart-old-price">${item.price.toFixed(2)}</span>
+                                                </>
 
-                                                ) : (
-                                                    <span className="cart-new-price">${item.price.toFixed(2)}</span>
-                                                )}
+                                            ) : (
+                                                <span className="cart-new-price">${item.price.toFixed(2)}</span>
+                                            )}
 
-                                            </div>
+                                        </div>
+
+                                        <p className="wishlist">Add To Wishlist ♡</p>
 
                                             <p className="wishlist">Add To Wishlist ♡</p>
                                     </div>
