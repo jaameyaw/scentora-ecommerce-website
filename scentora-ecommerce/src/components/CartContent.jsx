@@ -60,7 +60,9 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
 
                                         <p className="wishlist">Add To Wishlist ♡</p>
 
-                                            <p className="wishlist">Add To Wishlist ♡</p>
+                                        <button className="icon-btn delete-icon" onClick={() => removeFromCart(item.id)}>
+                                            <i class="fa-regular fa-trash-can"></i>
+                                        </button>
                                     </div>
                                 </div>
                                 
