@@ -1,6 +1,6 @@
 import '../App.css'
 
-export default function SideBarWrapper({isOpen, onClose, position, className, headerContent, children}) {
+export default function SideBarWrapper({isOpen, onClose, position, className, headerContent, variant, children}) {
     return (
         <>
             <div 
@@ -8,8 +8,9 @@ export default function SideBarWrapper({isOpen, onClose, position, className, he
                 onClick={onClose}
             ></div>
 
-            <div className={`sidebarWrapper ${isOpen ? 'open' : ''} ${position}`}>
+            <div className={`sidebarWrapper ${isOpen ? 'open' : ''} ${position} ${variant}`}>
                 <div className={className}>
+                    {variant === "cart" && <div className="spacer" />} 
                     <h2>{headerContent}</h2>
                     <button className="close-btn" onClick={onClose}>
                         <i className="fas fa-times"></i>
