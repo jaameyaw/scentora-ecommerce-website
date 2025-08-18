@@ -1,8 +1,6 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import SideBarWrapper from './SideBarWrapper';
-import './CartContent.css';
-import './CartSideBar.css';
 
 
 
