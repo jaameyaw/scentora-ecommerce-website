@@ -121,6 +121,35 @@
   z-index: 1001;
 }
 
+.sidebarWrapper.cart {
+  width: 100%;
+  max-width: 100%;
+  padding: 15px 0 0 0;
+
+}
+
+
+@media (min-width: 768px) {
+  .sidebarWrapper.cart {
+    width: 400px;
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .sidebarWrapper.cart {
+    width: 450px;
+    max-width: 450px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .sidebarWrapper.cart {
+    width: 650px;
+    max-width: 650px;
+  }
+}
+
 .sidebarWrapper.left {
   left: 0;
   transform: translateX(-100%);
