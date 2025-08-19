@@ -1,4 +1,5 @@
 import './FilterSideBar.css';
+import SideBarWrapper from './SideBarWrapper';
 import Button from './Button';
 import Slider from '@mui/material/Slider';
 import PriceBox from './PriceBox';
@@ -19,15 +20,12 @@ export default function FilterSideBar({ isOpen, onClose, filters, setFilters, on
 
     return (
         <>
-            <div className={`filterOverlay ${isOpen ? 'visible' : ''}`} onClick={onClose}></div>
-            <div className={`filterSidebar ${isOpen ? 'open' : ''}`}>
-
-                <div className="filterSiderbarHeader">
-                    <h2>Filter</h2>
-                    <button className="close-btn" onClick={onClose}>
-                        <i className="fas fa-times"></i>
-                    </button>
-                </div>
+            <SideBarWrapper  
+            isOpen={isOpen} 
+            onClose={onClose}
+            position="left" 
+            className="filterSiderbarHeader" 
+            headerContent='Filter'>
 
                 <div className="filterSiderContent">
                     <div className="filterSection">
@@ -99,8 +97,7 @@ export default function FilterSideBar({ isOpen, onClose, filters, setFilters, on
                         <Button className="apply-button" onClick={handleView}> View </Button>
                     </div>
                 </div>
-
-            </div>
+            </SideBarWrapper>
         </>
     )
 }
