@@ -1,6 +1,6 @@
 
-.cart{
-  padding: 2rem 1rem;
+.cart {
+  padding: 2rem 0.6rem;
 }
 
 .cart-container {
@@ -34,3 +34,16 @@
   text-transform: uppercase;
 }
 
+@media (max-width: 426px) {
+  .cart-header h1 {
+    font-size: 23px;
+    padding-top: 9px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .cart{
+    padding: 2rem 1rem;
+  }
+}
