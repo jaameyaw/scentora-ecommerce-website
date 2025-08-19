@@ -6,8 +6,10 @@
 .cart-products {
   display: flex;
   align-items: flex-start;
+  margin-top: 1rem;
   gap: 2rem;
 }
+
 
 .cart-layout {
   width: 60%;
@@ -21,7 +23,7 @@
 
 .cart-item-heading {
   background-color: #f4f4f4;
-  padding: 20px;
+  padding: 10px;
 }
 
 .cart-item-heading h3 {
@@ -91,6 +93,7 @@
   font-size: 14px;
 }
 
+
 .cart-quantity-wrapper h4{
   font: 500 14px var(--font-body);
   color: #444;
@@ -105,16 +108,14 @@
   margin-left: auto;
 }
 
-.cart-price {
+.cart-price, .cart-price div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  text-align: right;
 }
 
-.cart-price div {
-  display: flex;
-  flex-direction: column;
+.cart-price {
+  justify-content: space-around;
+  text-align: right;
 }
 
 .cart-new-price {
