@@ -205,8 +205,12 @@
     gap: 1rem;
   }
 
+  .cart-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+  }
+  
   .cart-item-details h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .wishlist {
