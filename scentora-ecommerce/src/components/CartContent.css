@@ -193,12 +193,8 @@
     padding-top: 9px;
   }
 
-  .close-icon {
-    width: 25px;
-    height: 25px;
-    border: none;
-    align-self: flex-start;
-    margin-top: 15px;
+  .icon-btn {
+    display: none;
   }
 
   .cart-item {
@@ -231,10 +227,11 @@
 
   }
 
-  .cart-price div {
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
+  .delete-icon {
+    display: block;
+    width: 25px;
+    height: 25px;
+    align-self: flex-end;
   }
 
   .wishlist {
