@@ -1,10 +1,12 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import './CartContent.css';
 
-const CartContent = ({variant, onNavigate, showSummary}) => {
+const CartContent = ({variant, showSummary, onClose}) => {
     const { cart, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
+    const navigate = useNavigate();
 
     return (
         <div className={`cart-product-container ${variant}`}>
@@ -16,9 +18,13 @@ const CartContent = ({variant, onNavigate, showSummary}) => {
                     {cart.length === 0 ? (
                         <div className="cart-empty">
                             <p className> Your cart is currently empty.</p>
-                            <Button className='ButtonTwo' onClick={() => onNavigate('/shop')}>
+                            <Button className='ButtonTwo' onClick={() => {
+                                onClose();
+                                navigate('/shop');
+                            }}>
                                 Return to Shop
                             </Button>
+          
                         </div>
 
                     ): (
