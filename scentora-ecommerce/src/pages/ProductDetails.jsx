@@ -3,13 +3,19 @@ import { useParams } from "react-router-dom";
 import perfumes from "../perfumes";
 import './ProductDetails.css';
 import Button  from '../components/Button';
-import { useState, useContext } from "react";
+import { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext";
 
 
-export default function ProductDetails() {
+export default function ProductDetails({toggleCart}) {
     const { addToCart } = useContext(CartContext);
     const [quantity, setQuantity] = useState(1);
+  
+
+    const handleAddToCart = (product, quantity) => {
+        addToCart(product, quantity);
+        toggleCart();
+    };
 
     const { slug } = useParams()
     const product = perfumes.find(p => p.slug === slug);
@@ -61,7 +67,7 @@ export default function ProductDetails() {
                     </div>
 
                     <div className="product-buttons">
-                        <Button className="ButtonOne" onClick={() => addToCart(product, quantity)}>add to cart</Button>
+                        <Button className="ButtonOne" onClick={() => handleAddToCart(product, quantity)}>add to cart</Button>
                         <Button className="ButtonTwo">buy now</Button>
                         <Button className="button-icon">
                             <i className="fa-regular fa-heart"></i>
@@ -73,10 +79,7 @@ export default function ProductDetails() {
                         <li>✔ No Hassle Refunds</li>
                         <li>✔ Secure Payments</li>
                     </ul>
-                </div>
-                
-
-                
+                </div> 
             </div>
         </section>
 
