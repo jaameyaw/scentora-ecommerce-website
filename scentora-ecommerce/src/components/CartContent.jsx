@@ -92,7 +92,7 @@ const CartContent = ({variant, showSummary, onClose}) => {
                     </div>
 
                     <div className="summary-row">
-                        <span>SubTotal</span>
+                        <span>Total</span>
                         <span className='cart-summary-value'>${cartTotal.toFixed(2)}</span>
                     </div>
 
