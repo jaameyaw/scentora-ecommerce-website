@@ -1,11 +1,5 @@
-.perfumeWeek {
-  margin-top: 2rem;
-  padding: 2rem 1rem;
-}
 
 .featuredWrapper {
-  max-width: 1400px;
-  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -57,9 +51,6 @@
 
 
 @media (min-width: 768px) {
-  .perfumeWeek {
-    margin-top: 4rem;
-  }
 
   .featuredWrapper {
     display: grid;
@@ -67,6 +58,13 @@
   }
 
 }   
+
+@media (min-width: 1024px) {
+  .featuredWrapper {
+    gap: 5rem;
+  }
+}
+
 
 @media (min-width: 1440px) {
   .featuredWrapper {
