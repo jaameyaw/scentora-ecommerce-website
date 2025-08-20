@@ -1,11 +1,12 @@
 
 import FilterSideBar from '../components/FilterSideBar';
 import { useState, useEffect } from 'react';
-import { Link, useParams, useNavigate} from 'react-router-dom';
+import { useParams} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
-
+import Breadcrumbs from '@mui/material/Breadcrumbs';
+import Link from '@mui/material/Link';
 
 
 
@@ -18,8 +19,6 @@ export default function Shop() {
         category: category || '',
         tag: '',
     });
-    const navigate = useNavigate();
-
     const [filteredPerfumes, setFilteredPerfumes] = useState(perfumes);
 
    
@@ -95,12 +94,15 @@ export default function Shop() {
     return (
         <section className="shop">
             <div className="shop-header">
-                <p className="breadrumb">
-                    <Link to="/">Home</Link> / 
-                    <Link to="/shop">Shop</Link> 
-                    {category && ` / ${category.charAt(0).toUpperCase() + category.slice(1)}`}
-                </p>
-
+                <Breadcrumbs aria-label="breadcrumb" separator="›" >
+                    <Link href="/" underline="hover" color='inherit'>Home</Link>
+                    <Link href="/shop" underline='hover' color='inherit'>Shop</Link>
+                    {category && (
+                        <Link href={`/shop/${category}`} underline='hover' color='inherit'>
+                            {category.charAt(0).toUpperCase() + category.slice(1)}
+                        </Link>
+                    )}
+                </Breadcrumbs>
                 <h1 className="shop-title">SHOP</h1>
             </div>
 
@@ -157,7 +159,10 @@ export default function Shop() {
                                 
                             </div>
 
-                            <Link to={`/product/${perfume.slug}`}>View</Link>
+                            <Link 
+                            href={`/product/${perfume.slug}`} sx={{ textDecorationColor: '#222', color: '#333' }}>
+                                View
+                            </Link>
 
                         </div>
                     ))
