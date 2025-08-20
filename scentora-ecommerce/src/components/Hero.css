@@ -14,7 +14,7 @@
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 50vh;
+  min-height: 60vh;
   position: relative;
   display: flex;
   align-items: center;
@@ -47,6 +47,7 @@
   margin-bottom: 2rem;
 }
 
+
 @media (max-width: 376px) {
   .hero h1 {
       font-size: 1.7rem;
@@ -59,9 +60,10 @@
 
 @media (min-width:  768px) {
   .hero {
-    min-height: 80vh;
+    min-height: 60vh;
     text-align: left;
     justify-content: flex-start;
+    padding-top: 1rem;
     
   }
 
@@ -76,9 +78,8 @@
     z-index: 1;
   }
 
-
   .hero-overlay {
-    margin-left: 9rem;
+    padding-left: 20px;
     background: transparent;
     box-shadow: none;
     position: relative;
@@ -87,7 +88,7 @@
   }
 
   .hero-overlay h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   .break-desktop {
@@ -95,33 +96,35 @@
   }
 }
 
-@media (min-width: 765px) and (max-width: 1024px) {
 
+@media (min-width: 1024px) {
   .hero {
-    min-height: 60vh;
-    padding-top: 1.5rem;
+    min-height: 70vh;
+    padding-top: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.3rem;
   }
 
   .hero-overlay {
-    margin-left: 0;
+    padding: 3rem 2rem;
+    max-width: 800px;
   }
-
-  .hero-overlay h1 {
-    font-size: 2.5rem;
-  }
-
 }
 
-@media (min-width: 426px) and (max-width: 768px) {
-
+@media (min-width: 1440px) {
   .hero {
-    min-height: 50vh;
+    min-height: 80vh;
   }
 
-  .hero-overlay h1 {
-    font-size: 1.8rem;
-    font-weight: 700;
-    padding-top: 1.5rem;
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-overlay {
+    padding: 1rem 10rem;
+    max-width: 1200px;
   }
 }
 
