@@ -1,18 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useContext } from "react";
 import { CartContext } from "../context/CartContext";
-import CartSideBar from "./CartSideBar";
-import CartContent from "./CartContent";
 import "./Navbar.css";
 import '../App.css';
 
-export default function Navbar() {
+export default function Navbar({toggleCart}) {
     const { cartCount } = useContext(CartContext);
     const [isOpen, setIsOpen] = useState(false);
-    const [cartOpen, setCartOpen] = useState(false);
     const toggleSidebar = () => setIsOpen(!isOpen);
-    const toggleCart = () => setCartOpen(!cartOpen);
-    const navigate = useNavigate();
 
     return (
     <>
@@ -68,13 +63,6 @@ export default function Navbar() {
             <Link to="/about" className="link" onClick={toggleSidebar}>About</Link>
             <a href="#contact" className="link" onClick={toggleSidebar}>Contact</a>
         </div>
-
-        <CartSideBar  
-            isOpen={cartOpen}
-            onClose = {() => setCartOpen(false)}        
-        > 
-            <CartContent variant='sidebar' onNavigate={navigate} showSummary = {false}/>
-        </CartSideBar>
     </>
     )
 }
