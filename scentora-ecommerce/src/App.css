@@ -124,9 +124,42 @@
   width: 100%;
   max-width: 100%;
   padding: 15px 0 0 0;
+  display: flex;
+  flex-direction: column; 
 
 }
 
+.emptyCartSidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+  height: 100%;
+  text-align: center;
+ padding: 2rem 1rem;
+}
+
+.emptyCartSidebar p {
+  margin: auto 0; 
+  color: #333;
+  font-size: 16px;
+  font-family: var(--font-body);
+}
+
+
+
+.sidebarContent {
+  flex: 1;             
+  overflow-y: auto;    
+}
+
+.sidebarSummary {
+  border-top: 1px solid #ddd;
+  padding: 1rem;
+  background: #fff;
+  position: sticky;
+  bottom: 0;
+}
 
 @media (min-width: 768px) {
   .sidebarWrapper.cart {
@@ -144,8 +177,8 @@
 
 @media (min-width: 1440px) {
   .sidebarWrapper.cart {
-    width: 650px;
-    max-width: 650px;
+    width: 550px;
+    max-width: 550px;
   }
 }
 
