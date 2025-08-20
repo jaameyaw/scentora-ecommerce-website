@@ -1,0 +1,18 @@
+
+.section-wrapper {
+    padding-top: 4rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-bottom: 0; 
+}
+
+.section-container {
+  max-width: 1400px; /* keeps it centered */
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .section-wrapper {
+    padding: 2rem 1rem;
+  }
+}
