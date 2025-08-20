@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState } from 'react';
+import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
@@ -16,7 +17,9 @@ function App() {
   const toggleCart = () => setCartOpen(!cartOpen);    
   const onClose = () => setCartOpen(false);
   return (
+    
     <Router>
+      <ScrollToTop />
       <Navbar  toggleCart={toggleCart}/>
       <Routes>
         <Route path="/" element={<Home />} />
