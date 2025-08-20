@@ -7,7 +7,7 @@ import '../App.css';
 export default function Navbar({toggleCart}) {
     const { cartCount } = useContext(CartContext);
     const [isOpen, setIsOpen] = useState(false);
-    const toggleSidebar = () => setIsOpen(!isOpen);
+    const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
     <>
@@ -42,7 +42,7 @@ export default function Navbar({toggleCart}) {
                     <span className="cart-count">{cartCount}</span>
                 </button>
                 
-                <button onClick={toggleSidebar} className="hamburger">
+                <button onClick={toggleMenu} className="hamburger">
                     <i className='fas fa-bars'></i>
                 </button>
 
@@ -51,17 +51,17 @@ export default function Navbar({toggleCart}) {
         </nav>
 
         <div className={`mobileSidebar ${isOpen ? "sidebarOpen" : ''}`}>
-            <button onClick={toggleSidebar} className="closeSidebarBtn">
+            <button onClick={toggleMenu} className="closeSidebarBtn">
                 <i className="fas fa-times "></i>
             </button>
             <i className={`fas fa-user userIcon`}></i>
-            <Link to="/shop" className="link" onClick={toggleSidebar}>Buy Perfumes</Link>
-            <Link to="/shop/men" className="link" onClick={toggleSidebar}>Men</Link>
-            <Link to="/shop/women" className="link" onClick={toggleSidebar}>Women</Link>
-            <Link to="/shop/unisex" className="link" onClick={toggleSidebar}>Unisex</Link>
-            <Link to="/shop" className="link" onClick={toggleSidebar}>Scent of the Month</Link>
-            <Link to="/about" className="link" onClick={toggleSidebar}>About</Link>
-            <a href="#contact" className="link" onClick={toggleSidebar}>Contact</a>
+            <Link to="/shop" className="link" onClick={toggleMenu}>Buy Perfumes</Link>
+            <Link to="/shop/men" className="link" onClick={toggleMenu}>Men</Link>
+            <Link to="/shop/women" className="link" onClick={toggleMenu}>Women</Link>
+            <Link to="/shop/unisex" className="link" onClick={toggleMenu}>Unisex</Link>
+            <Link to="/shop" className="link" onClick={toggleMenu}>Scent of the Month</Link>
+            <Link to="/about" className="link" onClick={toggleMenu}>About</Link>
+            <a href="#contact" className="link" onClick={toggleMenu}>Contact</a>
         </div>
     </>
     )
