@@ -1,7 +1,7 @@
 
 import FilterSideBar from '../components/FilterSideBar';
 import { useState, useEffect } from 'react';
-import { useParams} from 'react-router-dom';
+import { useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
@@ -20,7 +20,7 @@ export default function Shop() {
         tag: '',
     });
     const [filteredPerfumes, setFilteredPerfumes] = useState(perfumes);
-
+    const navigate = useNavigate();
    
     // If category changes from URL, update filters.category
     useEffect(() => {
@@ -135,7 +135,7 @@ export default function Shop() {
             <div className="product-grid">
                 {filteredPerfumes.length > 0 ? (
                     filteredPerfumes.map((perfume, id) => (
-                        <div className="product-card" key={id}>
+                        <div className="product-card" key={id} onClick={() => navigate(`/product/${perfume.slug}`)}>
                             {perfume.salePrice && <span className="sale-badge">Sale!</span>}
                             <img src={perfume.image} alt={perfume.name} />
                             <p className="product-category">{perfume.category}</p>
@@ -158,11 +158,6 @@ export default function Shop() {
                                 )}
                                 
                             </div>
-
-                            <Link 
-                            href={`/product/${perfume.slug}`} sx={{ textDecorationColor: '#222', color: '#333' }}>
-                                View
-                            </Link>
 
                         </div>
                     ))
