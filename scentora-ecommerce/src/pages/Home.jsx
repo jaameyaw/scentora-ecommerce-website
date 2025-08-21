@@ -113,9 +113,23 @@ export default function Home() {
             </div>
             </SectionWrapper>
 
+            <SectionWrapper variant="whyshop"> 
+            <SectionTitle subtitle="why shop with" title="scentora" />
+            <div className="whyshop-grid">
+                {whyshopItems.map((item) => (
+                <div key={item.id} className="whyshop-card">
+                    <div className="whyshop-icon">
+                        <img src={item.icon} alt={item.title} />
+                    </div>
+                    
+                    <div className="whyshop-text">
+                        <h3>{item.title}</h3>
+                        <p>{item.description}</p>
+                    </div>
                 </div>
-            
+                ))}
+            </div>
             </SectionWrapper>
         </>
-    )
+        )
 }
