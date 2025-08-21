@@ -1,13 +1,18 @@
 
 .section-wrapper {
-    padding-top: 4rem;
-    padding-right: 2rem;
-    padding-left: 2rem;
-    padding-bottom: 0; 
+  padding: 2rem 2rem;
+}
+
+.section-wrapper.whyshop {
+  background-color: #f7f7f7;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  padding: 1rem 2rem;
+
 }
 
 .section-container {
-  max-width: 1400px; /* keeps it centered */
+  max-width: 1400px; 
   margin: auto;
 }
 
