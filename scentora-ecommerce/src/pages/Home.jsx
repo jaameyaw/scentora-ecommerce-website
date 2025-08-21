@@ -8,6 +8,7 @@ import CategoryCard from '../components/CategoryCard';
 import perfumes from '../perfumes.js'; 
 import { useNavigate } from 'react-router-dom';
 
+
 export default function Home() {
 
     const categories = [
@@ -15,6 +16,50 @@ export default function Home() {
         { image: '/images/female-cat.jpg', title: 'Women' },
         { image: '/images/unisex-cat.jpg', title: 'Unisex' },
     ]
+
+    const whyshopItems = [
+        {
+            id: 1,
+            title: "Trustpilot Reviews",
+            description: (
+                <>
+                Rated 4.4 / 5 by 1,460+ <span className='highlight'>satisfied customers.</span>
+                </>
+            ),
+            icon: "/images/five.png",
+        },
+        {
+            id: 2,
+            title: "100% Authentic Products",
+            description: (
+                <>
+                Sourced only from <span className='highlight'>authorized suppliers.</span>
+                </>
+            ),
+            icon: "/images/authenticity.png",
+        },
+        {
+            id: 3,
+            title: "Free & Fast Shipping",
+            description: (
+                <>
+                Enjoy quick, reliable delivery at <span className='highlight'>no cost.</span>
+                </>
+            ),
+            icon: "/images/express-delivery.png",
+        },
+        {
+            id: 4,
+            title: "Secure Shopping Experience",
+            description: (
+                <>
+                Your information is <span className='highlight'>safe and protected.</span>
+                </>
+            ),
+            icon: "/images/security.png",
+        },
+    ];
+
 
     const bestsellers = perfumes.filter(perfume => perfume.tags.includes('best-selling'));
     const navigate = useNavigate();
