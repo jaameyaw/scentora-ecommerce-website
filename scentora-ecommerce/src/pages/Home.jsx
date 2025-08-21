@@ -18,16 +18,18 @@ export default function Home() {
         <>
             <Hero />
             <PerfumeofTheWeek />
-            <SectionWrapper className="categories">
-                <SectionTitle subtitle="New perfumes" title="Shop by category" />
-
-                <div className="categories-grid">
-                    {categories.map((category, index) => (
-                        <CategoryCard
-                            key={index}
-                            image={category.image}
-                            title={category.title}
-                        />
+            <SectionWrapper>
+            <SectionTitle subtitle="New perfumes" title="Shop by category" />
+            <div className="categories-grid">
+                {categories.map((category, index) => (
+                <CategoryCard
+                    key={index}
+                    image={category.image}
+                    title={category.title}
+                />
+                ))}
+            </div>
+            </SectionWrapper>
                     ))}
 
                 </div>
