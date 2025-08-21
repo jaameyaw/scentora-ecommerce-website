@@ -103,7 +103,12 @@ export default function Shop() {
                         </Link>
                     )}
                 </Breadcrumbs>
-                <h1 className="shop-title">SHOP</h1>
+                <h1 className="shop-title">
+                    {category
+                        ? `${category}'s perfume`
+                        : "perfume shop"
+                    }
+                </h1>
             </div>
 
             <div className="shop-controls">
