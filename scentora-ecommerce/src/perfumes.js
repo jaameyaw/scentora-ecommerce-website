@@ -129,7 +129,7 @@ const perfumes = [
     slug: 'versace-eros',
     price: 115,
     category: 'men',
-    tags: ['best-selling'],
+    tags: [],
     image: versaceEros,
     description: 'Versace Eros is a masculine fragrance with mint, green apple, and tonka bean—bold, passionate, and seductive.'
   },
@@ -182,7 +182,7 @@ const perfumes = [
     price: 125,
     salePrice: 110,
     category: 'unisex',
-    tags: ['best-selling'],
+    tags: [],
     image: yslY,
     description: 'Y by Yves Saint Laurent is a fresh and woody fragrance with bergamot, sage, and tonka bean—clean and charismatic.'
   }
