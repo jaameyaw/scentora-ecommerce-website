@@ -25,7 +25,8 @@ export default function FilterSideBar({ isOpen, onClose, filters, setFilters, on
             onClose={onClose}
             position="left" 
             className="filterSiderbarHeader" 
-            headerContent='Filter'>
+            headerContent='Filter'
+            >
 
                 <div className="filterSiderContent">
                     <div className="filterSection">
