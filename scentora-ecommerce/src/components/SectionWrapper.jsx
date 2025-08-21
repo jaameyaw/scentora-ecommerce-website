@@ -1,9 +1,9 @@
 
 import './SectionWrapper.css';
 
-const SectionWrapper = ({ children, className = "", containerClassName = ""}) => {
+const SectionWrapper = ({ children, containerClassName = "", variant}) => {
     return (
-        <section className={`section-wrapper ${className}`}>
+        <section className={`section-wrapper ${variant}`}>
             <div className={`section-container ${containerClassName}`}>
                 {children}
             </div>
