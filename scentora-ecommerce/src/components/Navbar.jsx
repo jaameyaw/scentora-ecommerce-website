@@ -27,7 +27,7 @@ export default function Navbar({toggleCart}) {
 
             <div className="desktopMenu">
                 <Link to="/about" className="link">About</Link>
-                <a href="#contact" className="link">Contact</a>
+                <Link to="/contact" className="link">Contact</Link>
                 <button onClick={toggleCart} className="cartIconDesktop">
                     <img src="/images/shopping-cart.png" alt='shopping bag' />
                     <span className="cart-count">{cartCount}</span>
