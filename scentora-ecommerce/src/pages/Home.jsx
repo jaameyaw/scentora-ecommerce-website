@@ -5,6 +5,7 @@ import PerfumeofTheWeek from '../components/PerfumeofTheWeek';
 import SectionWrapper from '../components/SectionWrapper';
 import SectionTitle from '../components/SectionTitle';
 import CategoryCard from '../components/CategoryCard';
+import TestimonialCarousel from '../components/TestimonialCarousel';
 import perfumes from '../perfumes.js'; 
 import { useNavigate } from 'react-router-dom';
 
@@ -131,6 +132,12 @@ export default function Home() {
                 ))}
                 </div>
             </SectionWrapper>
+
+            <SectionWrapper>
+                <SectionTitle subtitle="what our customers say" title="testimonials" />
+                <TestimonialCarousel />
+            </SectionWrapper>
+
         </>
         )
 }
