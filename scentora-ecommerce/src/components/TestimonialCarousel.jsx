@@ -3,6 +3,7 @@ import { Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./TestimonialCarousel.css";
+
 const testimonials = [
 
     {
@@ -36,3 +37,49 @@ const testimonials = [
         stars: 4,
     },
 ];
+
+const TestimonialCarousel = () => {
+    return (
+        <Swiper
+            modules={[Pagination, Autoplay]}
+            loop
+            autoplay={{ delay: 3500, disableOnInteraction: false }}
+            pagination={{ clickable: true }}
+            spaceBetween={28}
+            slidesPerView={3}
+            breakpoints={{
+                0: { slidesPerView: 1 },
+                768: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
+            }}
+        >
+            {testimonials.map((item, key) => (
+                <SwiperSlide key={key}>
+                    <article className="testimonial-card">
+                        <div className="testimonial-avatar-wrap">
+                            <img className="testimonial-avatar" src={item.image} alt={item.name} />
+                        </div>
+
+                        <div className="quote-container">
+                            <span className="testimonial-quote">“</span>
+                        </div>
+
+                        <header className="testimonial-head">
+                            <h3 className="testimonial-name">{item.name}</h3>
+                            <p className="testimonial-role">{item.role}</p>
+                        </header>
+
+                        <p className="testimonial-text">{item.text}</p>
+
+                        <div className="testimonial-stars" aria-label={`${item.stars} star rating`}>
+                            {"★".repeat(item.stars)}
+                            {"☆".repeat(5 - item.stars)}
+                        </div>
+                    </article>
+                </SwiperSlide>
+            ))}
+        </Swiper>
+    );
+};
+
+export default TestimonialCarousel;
