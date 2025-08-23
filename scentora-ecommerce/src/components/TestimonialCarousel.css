@@ -1,0 +1,112 @@
+.testimonial-card{
+  position: relative;
+  background-color: var(--cream-gold);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,.08);
+  padding: 2.5rem 1.4rem 1.6rem;
+  margin-top: 2.6rem;            
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.testimonial-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(0,0,0,.10);
+}
+
+.testimonial-avatar-wrap{
+  position: absolute;
+  left: 50%;
+  top: -34px;
+  transform: translateX(-50%);
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  box-shadow: 0 6px 16px rgba(0,0,0,.12);
+}
+
+.testimonial-avatar{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.quote-container {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-soft);
+  padding-top: 10px;
+}
+
+.testimonial-quote {
+  font-size: 2.5rem;
+  color: var(--accent-quote);
+  line-height: 1;
+  font-weight: bold;
+}
+
+.testimonial-head{
+  margin-top: .35rem;
+}
+
+.testimonial-name{
+  margin: .9rem 0 .3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: hsl(0, 0%, 13%);
+}
+
+.testimonial-role{
+  margin: 0 0 1rem;
+  font-size: .9rem;
+  color: #6d6d6d;
+}
+
+.testimonial-text{
+  color: #222;
+  font-size: 13px;
+  font-family: var(--font-body);
+  line-height: 1.55;
+  margin: 0 0 1.5rem;
+  padding: 0 .25rem;
+  
+}
+
+.testimonial-stars{
+  color: var(--gold);
+  letter-spacing: .15rem;
+  font-size: 1.05rem;
+}
+
+.swiper-pagination {
+  position: relative !important; 
+  margin-top: 20px;
+}
+.swiper-pagination-bullet{
+  background: #d5c3b2 !important;
+  opacity: .7;
+}
+.swiper-pagination-bullet-active{
+  background: var(--accent-quote) !important;
+  opacity: 1;
+}
+
+@media (max-width: 768px){
+  .testimonial-card {
+    padding: 2.25rem 1.25rem 1.7rem;
+  }
+
+  .testimonial-quote {
+    top: 16px;
+    left: 16px;
+  }
+}
