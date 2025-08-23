@@ -4,7 +4,7 @@
 }
 
 .section-wrapper.whyshop {
-  background-color: #f3f3f3;
+  background-color: var(--bg-light-gray);
   margin-top: 4rem;
   margin-bottom: 3rem;
   padding: 1rem 2rem;
