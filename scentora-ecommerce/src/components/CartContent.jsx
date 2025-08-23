@@ -19,7 +19,6 @@ const CartContent = ({variant, showSummary, onClose}) => {
                         <div className="cart-empty">
                             <p className> Your cart is currently empty.</p>
                             <Button className='ButtonTwo' onClick={() => {
-                                onClose();
                                 navigate('/shop');
                             }}>
                                 Return to Shop
