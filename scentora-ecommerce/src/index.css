@@ -11,9 +11,13 @@
   --eerrie-black: #1C1C1C;
   --dark-gray: #555555;
   --gold: #D4AF37;
+  --light-gold: #F8E9B6;
+  --cream-gold: #FCF7E6;
   --bg-baby-powder: #F9F9F6;
-  --isabaseline: #EDE9E3;
-  --desert-sand: #E2B8A0;
+  --bg-light-gray: #f3f3f3;
+  --bg-light-pink: #f8ebf2;
+  --bg-soft: #ffe9cf;
+  --accent-quote: #c08a55;
 }
 
 * {
