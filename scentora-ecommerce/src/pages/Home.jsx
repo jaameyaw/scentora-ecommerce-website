@@ -8,6 +8,7 @@ import CategoryCard from '../components/CategoryCard';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import perfumes from '../perfumes.js'; 
 import { useNavigate } from 'react-router-dom';
+import Cta from '../components/CTA.jsx';
 
 
 export default function Home() {
@@ -138,6 +139,8 @@ export default function Home() {
                 <TestimonialCarousel />
             </SectionWrapper>
 
+            <Cta />
         </>
-        )
+
+    )
 }
