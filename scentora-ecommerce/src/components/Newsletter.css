@@ -53,3 +53,38 @@
 }
 
 
+@media (max-width: 768px) {
+
+  .newsletter-content {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    width: 12rem;
+  }
+
+  .newsletter-form {
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .newsletter-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .newsletter-content p {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-form input {
+    width: 100%;
+    border-radius: 4px;
+  }
+}
