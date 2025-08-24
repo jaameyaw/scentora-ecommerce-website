@@ -11,6 +11,8 @@ import Cart from './pages/Cart';
 import ProductDetails from './pages/ProductDetails';
 import CartSideBar from './components/CartSideBar';
 import CartContent from './components/CartContent';
+import SectionWrapper from './components/SectionWrapper';
+import Newsletter from './components/Newsletter';
 
 function App() {
 
@@ -35,6 +37,10 @@ function App() {
       <CartSideBar isOpen={cartOpen} onClose={onClose}>
         <CartContent variant='sidebar' onClose={onClose} showSummary = {false}/>
       </CartSideBar>
+
+      <SectionWrapper variant="newsletter">
+          <Newsletter />   
+      </SectionWrapper>
     </Router>
   ) 
 }
