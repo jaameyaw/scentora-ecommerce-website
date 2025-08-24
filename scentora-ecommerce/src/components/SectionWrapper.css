@@ -10,6 +10,10 @@
   padding: 1rem 2rem;
 }
 
+.section-wrapper.newsletter {
+  background-color: var(--bg-light-pink);
+  margin-top: 2rem;
+}
 }
 
 .section-container {
