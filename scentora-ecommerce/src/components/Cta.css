@@ -1,0 +1,50 @@
+.cta-section {
+    margin-top: 4rem;
+}
+
+.cta-swiper {
+  padding-bottom: 2rem;
+}
+
+.cta-section h3 {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #333;
+  font-family: var(--font-heading);
+  margin-bottom: 2.5rem;
+}
+
+.cta-section span {
+  background-color: var(--gold);
+  margin-left: 7px;
+  padding: 0.55rem 0.5em;
+}
+
+
+.cta-card {
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: var(--bg-light-pink);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.cta-image {
+  width: 100%;
+  height: 250px;      
+  object-fit: cover; 
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.cta-card:hover .cta-image {
+    opacity: 0.6;
+}
+
+
+@media (max-width: 768px) {
+  .cta-image {
+      height: 200px; 
+  }
+}
