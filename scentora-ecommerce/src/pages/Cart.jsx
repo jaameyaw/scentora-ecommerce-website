@@ -2,8 +2,7 @@ import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { useNavigate } from 'react-router-dom';
 import CartContent from '../components/CartContent';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
+import Breadcrumb from '../components/Breadcrumb';
 import './Cart.css';
 
 const Cart = () => {
@@ -12,10 +11,11 @@ const Cart = () => {
 
     return (
         <section className="cart">
-            <Breadcrumbs aria-label="breadcrumb" separator="›" >
-                <Link href="/" underline="hover" color='inherit'>Home</Link>
-                <Link href="/cart" underline='hover' color='inherit'>Cart</Link>
-            </Breadcrumbs>
+            <Breadcrumb links={[
+                
+                {to: "/", label: "Home" },
+                {to: "/cart", label: "Cart" }
+            ]}/>
  
             <div className="cart-container">
                 <div className="cart-header">
