@@ -5,8 +5,7 @@ import { useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
-import Breadcrumbs from '@mui/material/Breadcrumbs';
-import Link from '@mui/material/Link';
+import Breadcrumb from '../components/Breadcrumb';
 
 
 
@@ -91,22 +90,26 @@ export default function Shop() {
         navigate('/shop');
     }
 
+    const links = [
+        { to: "/", label: "Home" },
+        { to: "/shop", label: "Shop" },
+    ];
+
+    if (category) {
+        links.push({
+        to: `/shop/${category}`,
+        label: category.charAt(0).toUpperCase() + category.slice(1),
+        });
+    }
+
     return (
         <section className="shop">
             <div className="shop-header">
-                <Breadcrumbs aria-label="breadcrumb" separator="›" >
-                    <Link href="/" underline="hover" color='inherit'>Home</Link>
-                    <Link href="/shop" underline='hover' color='inherit'>Shop</Link>
-                    {category && (
-                        <Link href={`/shop/${category}`} underline='hover' color='inherit'>
-                            {category.charAt(0).toUpperCase() + category.slice(1)}
-                        </Link>
-                    )}
-                </Breadcrumbs>
+                <Breadcrumb links={links}/> 
                 <h1 className="shop-title">
                     {category
-                        ? `${category}'s perfume`
-                        : "perfume shop"
+                        ? `${category} `
+                        : "Shop"
                     }
                 </h1>
             </div>
