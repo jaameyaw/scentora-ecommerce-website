@@ -8,21 +8,6 @@
   margin-bottom: 2rem;
 }
 
-.breadcrumb {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-.breadcrumb a {
-  text-decoration: none;
-  color: #000;
-}
-
-.breadcrumb span {
-  color: #666;
-  font-weight: bold;
-}
-
 .shop-title {
   font-size: 2rem;
   font-family: var(--font-title);
