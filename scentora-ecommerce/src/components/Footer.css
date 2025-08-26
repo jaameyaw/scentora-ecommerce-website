@@ -1,0 +1,141 @@
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.footer-info h3 {
+    font-family: var(--font-title);
+    font-size: 2rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.footer-info p,
+.footer-link,
+.footer-contact p,
+.contact-item span,
+.contact-item span a {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: rgba(225,225,225, 0.7);
+    line-height: 1.8;
+}
+
+.footer-info p {
+    margin-top: 0.5rem;
+    width: 90%;
+}
+
+@media (max-width: 600px) {
+    .footer-info p {
+        width: 100%;
+    }
+}
+
+.footer-socials {
+  padding: 2rem 0 2rem;
+}
+
+.footer-socials i {
+  font-size: 14px;
+}
+
+.footer-socials a {
+  padding: 10px 15px;
+  text-align: center; 
+  color: var(--gold);
+  border-radius: 0;
+  border: 1px solid rgba(225,225,225, 0.2);
+  box-shadow: inset 0 0 0 0 var(--gold);
+  transition: ease-out 0.3s;
+}
+
+.footer-socials a:hover {
+  color: #000;
+  box-shadow: inset 0 0 0 30px var(--gold);
+}
+
+.footer-socials a:focus {
+  box-shadow: none;
+}
+
+.footer-socials a:not(:first-child) {
+  margin-left: 5px;
+}
+
+.footer-heading {
+    font-family: var(--font-title);
+    font-size: 18px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.footer-link, .logo-link, .footer-copyright a {
+    text-decoration: none;
+}
+
+.footer-links {
+    margin-top: 1rem;
+}
+
+.footer-link {
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+.footer-link, .footer-copyright a {
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover,
+.contact-item span a:hover,
+.footer-copyright a:hover {
+    color: var(--gold);
+}
+
+.footer-contact p {
+    margin-top: 1rem;
+}
+
+.contact-item {
+    margin-top: 0.7rem;
+}
+
+.contact-item span {
+    display: block;
+    margin-bottom: 0.8rem;
+}
+
+.contact-item span a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-icon {
+    padding-right: 10px;
+    font-size: 14px;
+    color: var(--gold);
+}
+
+.footer-copyright {
+    margin: 2rem 0;
+    border-top: 1px solid rgba(225,225,225, 0.1);
+}
+
+.footer-copyright p {
+    color: rgba(225,225,225, 0.7);
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.footer-copyright p, .footer-copyright a {
+    color: rgba(225,225,225, 0.7);
+    font-family: var(--font-body);
+    font-size: 14px;
+    
+}
+.footer-copyright i {
+    color: var(--gold);
+}
