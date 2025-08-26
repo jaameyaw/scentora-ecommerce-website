@@ -65,3 +65,13 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
+
+            <div className="footer-copyright">
+                <p>&copy; {new Date().getFullYear()} Scentora. All rights reserved. | Made with <i class="fa-solid fa-heart"></i>  by 
+                <a href="https://github.com/jaameyaw" target="_blank" rel='noopener noreferrer'> Johnson Ameyaw.</a></p>
+            </div>
+        </div>
+
+    );
+}
+
