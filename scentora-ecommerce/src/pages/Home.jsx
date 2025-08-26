@@ -38,7 +38,7 @@ export default function Home() {
                 Sourced only from <span className='highlight'>authorized suppliers.</span>
                 </>
             ),
-            icon: "/images/authenticity.png",
+            icon: "/images/authentic.png",
         },
         {
             id: 3,
