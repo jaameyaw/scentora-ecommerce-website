@@ -14,6 +14,10 @@
   background-color: var(--bg-light-pink);
   margin-top: 2rem;
 }
+
+.section-wrapper.footer {
+  background-color: var(--eerrie-black);
+  padding: 2rem; 
 }
 
 .section-container {
