@@ -13,6 +13,7 @@ import CartSideBar from './components/CartSideBar';
 import CartContent from './components/CartContent';
 import SectionWrapper from './components/SectionWrapper';
 import Newsletter from './components/Newsletter';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
 
       <SectionWrapper variant="newsletter">
           <Newsletter />   
+      </SectionWrapper>
+      <SectionWrapper variant="footer">
+          <Footer />
       </SectionWrapper>
     </Router>
   ) 
