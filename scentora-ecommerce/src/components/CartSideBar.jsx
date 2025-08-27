@@ -25,7 +25,7 @@ const CartSideBar = ({isOpen, onClose, children}) => {
                 
                 <div className="emptyCartSidebar">     
                     <p className='emp'>Your cart is currently empty.</p>
-                    <Button className='ButtonTwo width ' onClick={() => {
+                    <Button className='button button-black width ' onClick={() => {
                         onClose();
                         navigate('/shop');
                     }}>
@@ -55,11 +55,11 @@ const CartSideBar = ({isOpen, onClose, children}) => {
                         <span className='cart-summary-value' >${cartTotal.toFixed(2)}</span>
                     </div>
 
-                    <Button className='ButtonTwo width'>
+                    <Button className='button button-black width'>
                         Proceed to Checkout    
                     </Button>
 
-                    <Button className='ButtonOne width' onClick={() => {
+                    <Button className='button button-gold width' onClick={() => {
                         onClose();
                         navigate('/cart');
                     }}>

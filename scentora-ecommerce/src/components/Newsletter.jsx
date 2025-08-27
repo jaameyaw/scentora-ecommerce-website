@@ -21,7 +21,7 @@ const Newsletter = () => {
                     placeholder="Your email address"
                     required
                 />
-                <Button className='ButtonTwo'>Subscribe</Button>
+                <Button className='button button-black'>Subscribe</Button>
             </form>
         </div>
     </div>

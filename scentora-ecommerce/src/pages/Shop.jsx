@@ -127,7 +127,7 @@ export default function Shop() {
 
             {isFilterActive() && 
             <div className=''>
-                <Button className="clearButton" onClick={handleClear}>Clear All</Button>    
+                <Button className="button button-black button-clear" onClick={handleClear}>Clear All</Button>    
             </div>}
             
             <FilterSideBar

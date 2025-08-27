@@ -17,7 +17,7 @@ export default function PerfumeofTheWeek() {
                     A bold and sensual fragrance that embodies freedom and femininity. With notes of lavender, orange blossom, and vanilla, it creates a captivating scent that lingers throughout the day.
                 </p>                
                 <Button
-                className="Button"
+                className="button button-gold"
                 onClick={() => navigate('/product/ysl-libre-eau-de-parfum')}
                 > Buy Now </Button>
 

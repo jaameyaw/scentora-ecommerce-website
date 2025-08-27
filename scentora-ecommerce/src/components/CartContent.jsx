@@ -18,7 +18,7 @@ const CartContent = ({variant, showSummary, onClose}) => {
                     {cart.length === 0 ? (
                         <div className="cart-empty">
                             <p className> Your cart is currently empty.</p>
-                            <Button className='ButtonTwo' onClick={() => {
+                            <Button className='button button-black' onClick={() => {
                                 navigate('/shop');
                             }}>
                                 Return to Shop
@@ -95,7 +95,7 @@ const CartContent = ({variant, showSummary, onClose}) => {
                         <span className='cart-summary-value'>${cartTotal.toFixed(2)}</span>
                     </div>
 
-                    <Button className="ButtonOne width">Checkout</Button>
+                    <Button className="button button-gold width">Checkout</Button>
                 </div>
             }
             </div>

@@ -67,8 +67,8 @@ export default function ProductDetails({toggleCart}) {
                     </div>
 
                     <div className="product-buttons">
-                        <Button className="ButtonOne" onClick={() => handleAddToCart(product, quantity)}>add to cart</Button>
-                        <Button className="ButtonTwo">buy now</Button>
+                        <Button className="button button-gold" onClick={() => handleAddToCart(product, quantity)}>add to cart</Button>
+                        <Button className="button button-black">buy now</Button>
                         <Button className="button-icon">
                             <i className="fa-regular fa-heart"></i>
                         </Button>

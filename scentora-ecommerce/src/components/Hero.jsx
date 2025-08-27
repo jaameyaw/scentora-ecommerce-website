@@ -17,7 +17,7 @@ export default function Hero() {
                 </h1>
                 <p>Discover your future scent with Scentora.</p> 
                 <Button
-                className="Button"
+                className="button button-gold"
                 onClick={() => navigate('/shop')}
                 > Shop Now </Button>
             </div>

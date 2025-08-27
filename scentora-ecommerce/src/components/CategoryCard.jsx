@@ -11,7 +11,7 @@ const CategoryCard = ({ image, title }) => {
             <img src={image} alt={title} className="category-image" />
             <div className="category-info">
                 <h3 className="category-title">{title}</h3>
-                <Button className='ButtonOne mt' onClick={() => navigate(`/shop/${title.toLowerCase()}`)}>
+                <Button className='button button-gold mt' onClick={() => navigate(`/shop/${title.toLowerCase()}`)}>
                     {`Shop all ${title}`}
                 </Button>
             </div>
