@@ -19,7 +19,7 @@ const Cart = () => {
  
             <div className="cart-container">
                 <div className="cart-header">
-                    <div className="img-wrapper">
+                    <div className="cart-icon-wrapper">
                         <img src="/images/shopping-bag.png" />
                     </div>
                     <h1>Your Cart ({cartCount} items)</h1>
