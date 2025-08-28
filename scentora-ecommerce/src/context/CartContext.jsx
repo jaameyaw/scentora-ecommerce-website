@@ -9,10 +9,18 @@ export function CartProvider ({children}) {
         return savedCart ? JSON.parse(savedCart) : [];
     });
 
+
+    const [isCartOpen, setIsCartOpen] = useState(false);
+
   // Save cart to localStorage whenever it changes
     useEffect(() => {
         localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
+
+    const openCart = () => setIsCartOpen(true);
+    const closeCart = () => setIsCartOpen(false);
+    const toggleCart = () => setIsCartOpen((prev) => !prev);
+   
 
 
     const addToCart = (product, quantity = 1) => {
@@ -31,6 +39,8 @@ export function CartProvider ({children}) {
                 return [...prevCart, { ...product, quantity }]; 
             }
         })
+
+        openCart();
     }
 
 
@@ -57,7 +67,8 @@ export function CartProvider ({children}) {
     
 
 
-    const value = { cart, cartCount, cartTotal, setCart, addToCart, removeFromCart, updateQuantity }
+    const value = { cart, cartCount, cartTotal, isCartOpen, setCart, addToCart, removeFromCart, updateQuantity, openCart,
+        closeCart, toggleCart}
 
     return (
         <CartContext.Provider value={value}>
