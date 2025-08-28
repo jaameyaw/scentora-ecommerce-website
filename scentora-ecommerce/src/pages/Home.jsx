@@ -6,12 +6,16 @@ import SectionWrapper from '../components/SectionWrapper';
 import SectionTitle from '../components/SectionTitle';
 import CategoryCard from '../components/CategoryCard';
 import TestimonialCarousel from '../components/TestimonialCarousel';
+import ProductCard from '../components/ProductCard.jsx';
 import perfumes from '../perfumes.js'; 
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
 import Cta from '../components/CTA.jsx';
+import { CartContext } from '../context/CartContext.jsx';
 
 
 export default function Home() {
+    const {addToCart} = useContext(CartContext)
 
     const categories = [
         { image: '/images/male-cat.jpg', title: 'Men' },
@@ -103,33 +107,13 @@ export default function Home() {
 
 
             <SectionWrapper>
-            <SectionTitle subtitle="Check out our" title="best sellers" />
+                <SectionTitle subtitle="Check out our" title="best sellers" />
                 <div className="categories-grid">
-                {bestsellers.map((perfume, id) => (
-                    <div className="product-card" key={id} onClick={() => navigate(`/product/${perfume.slug}`)}>
-                        {perfume.salePrice && <span className="sale-badge">Sale!</span>}
-                        <img src={perfume.image} alt={perfume.name} />
-                        <p className="product-category">{perfume.category}</p>
-                        <h3 className="product-name">{perfume.name}</h3>
-                        <div className="product-rating">
-                            {Array(5)
-                            .fill()
-                            .map((_, i) => (
-                            <i key={i} className="fa-regular fa-star star-icon"></i>
-                            ))}
-                        </div>
-                        <div className="price">
-                            {perfume.salePrice ? (
-                            <>
-                                <span className="old-price">${perfume.price.toFixed(2)}</span>
-                                <span className="new-price">${perfume.salePrice.toFixed(2)}</span>
-                            </>
-                            ) : (
-                            <span className="new-price">${perfume.price.toFixed(2)}</span>
-                            )}
-                            
-                        </div>
-                    </div>
+                {bestsellers.map((perfume) => (
+                    <ProductCard  
+                    perfume={perfume}
+                    key={perfume.key}
+                    onAddToCart={addToCart}/>
                 ))}
                 </div>
             </SectionWrapper>
