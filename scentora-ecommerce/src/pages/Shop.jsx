@@ -1,16 +1,18 @@
 
 import FilterSideBar from '../components/FilterSideBar';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams, useNavigate} from 'react-router-dom';
 import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
 import Breadcrumb from '../components/Breadcrumb';
+import { CartContext } from '../context/CartContext';
 import ProductCard from '../components/ProductCard';
 
 
 
 export default function Shop() {
+    const {addToCart} = useContext(CartContext)
     const { category } = useParams();
     const [showFilter, setShowFilter] = useState(false);
     const [originalPerfumes, setOriginalPerfumes] = useState([]);
@@ -91,6 +93,8 @@ export default function Shop() {
         navigate('/shop');
     }
 
+
+
     const links = [
         { to: "/", label: "Home" },
         { to: "/shop", label: "Shop" },
@@ -146,6 +150,8 @@ export default function Shop() {
                     filteredPerfumes.map((perfume) => (
                         <ProductCard 
                         key={perfume.id}
+                        perfume={perfume}
+                        onAddToCart={addToCart} />
                     ))
                 ) : (
                     <p className="no-products">No products found</p>
