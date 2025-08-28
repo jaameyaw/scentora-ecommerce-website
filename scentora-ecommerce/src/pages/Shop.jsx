@@ -6,6 +6,7 @@ import './Shop.css';
 import perfumes from '../perfumes'; 
 import Button from '../components/Button';
 import Breadcrumb from '../components/Breadcrumb';
+import ProductCard from '../components/ProductCard';
 
 
 
@@ -142,32 +143,9 @@ export default function Shop() {
             
             <div className="product-grid">
                 {filteredPerfumes.length > 0 ? (
-                    filteredPerfumes.map((perfume, id) => (
-                        <div className="product-card" key={id} onClick={() => navigate(`/product/${perfume.slug}`)}>
-                            {perfume.salePrice && <span className="sale-badge">Sale!</span>}
-                            <img src={perfume.image} alt={perfume.name} />
-                            <p className="product-category">{perfume.category}</p>
-                            <h3 className="product-name">{perfume.name}</h3>
-                            <div className="product-rating">
-                                {Array(5)
-                                    .fill()
-                                    .map((_, i) => (
-                                    <i key={i} className="fa-regular fa-star star-icon"></i>
-                                ))}
-                            </div>
-                            <div className="price">
-                                {perfume.salePrice ? (
-                                    <>
-                                        <span className="old-price">${perfume.price.toFixed(2)}</span>
-                                        <span className="new-price">${perfume.salePrice.toFixed(2)}</span>
-                                    </>
-                                ) : (
-                                    <span className="new-price">${perfume.price.toFixed(2)}</span>
-                                )}
-                                
-                            </div>
-
-                        </div>
+                    filteredPerfumes.map((perfume) => (
+                        <ProductCard 
+                        key={perfume.id}
                     ))
                 ) : (
                     <p className="no-products">No products found</p>
