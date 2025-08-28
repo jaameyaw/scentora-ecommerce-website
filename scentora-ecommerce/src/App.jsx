@@ -15,28 +15,26 @@ import SectionWrapper from './components/SectionWrapper';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
+
 function App() {
 
-  const [cartOpen, setCartOpen] = useState(false);
-  const toggleCart = () => setCartOpen(!cartOpen);    
-  const onClose = () => setCartOpen(false);
   return (
     
     <Router>
       <ScrollToTop />
-      <Navbar  toggleCart={toggleCart}/>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/shop/:category" element={<Shop />} />
+        <Route path="/shop/:category" element={<Shop  />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:slug" element={<ProductDetails toggleCart={toggleCart} />} />
+        <Route path="/product/:slug" element={<ProductDetails  />} />
         <Route path="/cart" element={<Cart />} />
       </Routes>
 
-      <CartSideBar isOpen={cartOpen} onClose={onClose}>
-        <CartContent variant='sidebar' onClose={onClose} showSummary = {false}/>
+      <CartSideBar>
+        <CartContent variant='sidebar' showSummary = {false}/>
       </CartSideBar>
 
       <SectionWrapper variant="newsletter">
