@@ -7,16 +7,16 @@ import Button from './Button';
 
 
 
-const CartSideBar = ({isOpen, onClose, children}) => {
-    const { cart, cartCount, cartTotal } = useContext(CartContext);
+const CartSideBar = ({children}) => {
+    const { cart, cartCount, cartTotal, isCartOpen, closeCart } = useContext(CartContext);
     const navigate = useNavigate();
 
     return (
         <>
             {cart.length === 0 ? (
                 <SideBarWrapper 
-                    isOpen={isOpen} 
-                    onClose={onClose} 
+                    isOpen={isCartOpen} 
+                    onClose={closeCart} 
                     position="right" 
                     variant='cart'
                     className="cartsidebarHeader" 
@@ -26,7 +26,7 @@ const CartSideBar = ({isOpen, onClose, children}) => {
                 <div className="emptyCartSidebar">     
                     <p className='emp'>Your cart is currently empty.</p>
                     <Button className='button button-black width ' onClick={() => {
-                        onClose();
+                        closeCart();
                         navigate('/shop');
                     }}>
                         Return to Shop
@@ -36,8 +36,8 @@ const CartSideBar = ({isOpen, onClose, children}) => {
                 </SideBarWrapper>   
             ) : (   
                 <SideBarWrapper 
-                    isOpen={isOpen} 
-                    onClose={onClose} 
+                    isOpen={isCartOpen} 
+                    onClose={closeCart} 
                     position="right" 
                     variant='cart'
                     className="cartsidebarHeader" 
@@ -60,7 +60,7 @@ const CartSideBar = ({isOpen, onClose, children}) => {
                     </Button>
 
                     <Button className='button button-gold width' onClick={() => {
-                        onClose();
+                        closeCart();
                         navigate('/cart');
                     }}>
                         view cart   
