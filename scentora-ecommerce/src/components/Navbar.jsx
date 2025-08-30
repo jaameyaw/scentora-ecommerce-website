@@ -4,8 +4,8 @@ import { CartContext } from "../context/CartContext";
 import "./Navbar.css";
 import '../App.css';
 
-export default function Navbar({toggleCart}) {
-    const { cartCount } = useContext(CartContext);
+export default function Navbar() {
+    const { cartCount, toggleCart } = useContext(CartContext);
     const [isOpen, setIsOpen] = useState(false);
     const toggleMenu = () => setIsOpen(!isOpen);
 
