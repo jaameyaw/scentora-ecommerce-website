@@ -30,7 +30,7 @@ const CartContent = ({variant, showSummary, onClose}) => {
                         cart.map((item) => (
                             <div key={item.id} className={`cart-item`}>
                                 <button className="icon-btn" onClick={() => removeFromCart(item.id)}>
-                                    <i class="fa-regular fa-trash-can"></i>
+                                    <i className="fa-regular fa-trash-can"></i>
                                 </button>
                                 <div className={`item-image-wrapper`}>
                                     <img src={item.image} alt={item.name} className={`cart-item-img`} />
@@ -66,7 +66,7 @@ const CartContent = ({variant, showSummary, onClose}) => {
                                         <p className="wishlist">Add To Wishlist ♡</p>
 
                                         <button className="icon-btn delete-icon" onClick={() => removeFromCart(item.id)}>
-                                            <i class="fa-regular fa-trash-can"></i>
+                                            <i className="fa-regular fa-trash-can"></i>
                                         </button>
                                     </div>
                                 </div>

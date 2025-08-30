@@ -121,7 +121,7 @@ export default function Shop() {
 
             <div className="shop-controls">
                 <button className="filter-button" onClick={() => setShowFilter(true)}>
-                    <i class="fa-solid fa-sliders"></i><span className="filter-text">Filter Products</span>
+                    <i className="fa-solid fa-sliders"></i><span className="filter-text">Filter Products</span>
                 </button>
                 <select className='sort-select' onChange={handleSorting}>
                     <option value="default">Default sorting</option>
