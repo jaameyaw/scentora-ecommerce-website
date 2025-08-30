@@ -7,15 +7,10 @@ import { useState, useContext } from "react"
 import { CartContext } from "../context/CartContext";
 
 
-export default function ProductDetails({toggleCart}) {
+export default function ProductDetails() {
     const { addToCart } = useContext(CartContext);
     const [quantity, setQuantity] = useState(1);
-  
 
-    const handleAddToCart = (product, quantity) => {
-        addToCart(product, quantity);
-        toggleCart();
-    };
 
     const { slug } = useParams()
     const product = perfumes.find(p => p.slug === slug);
@@ -67,7 +62,7 @@ export default function ProductDetails({toggleCart}) {
                     </div>
 
                     <div className="product-buttons">
-                        <Button className="button button-gold" onClick={() => handleAddToCart(product, quantity)}>add to cart</Button>
+                        <Button className="button button-gold" onClick={() => addToCart(product, quantity)}>add to cart</Button>
                         <Button className="button button-black">buy now</Button>
                         <Button className="button-icon">
                             <i className="fa-regular fa-heart"></i>
