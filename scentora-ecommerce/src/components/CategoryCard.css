@@ -10,10 +10,6 @@
     transition: transform 0.5s ease;
 }
 
-.category-card:hover img {
-    transform: translateY(-5px);
-}
-
 .category-info {
     padding: 1rem 0;
 }
