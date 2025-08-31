@@ -94,7 +94,6 @@ export default function Shop() {
     }
 
 
-
     const links = [
         { to: "/", label: "Home" },
         { to: "/shop", label: "Shop" },
@@ -151,7 +150,7 @@ export default function Shop() {
                         <ProductCard 
                         key={perfume.id}
                         perfume={perfume}
-                        onAddToCart={addToCart} />
+                        onAddToCart={addToCart}/>
                     ))
                 ) : (
                     <p className="no-products">No products found</p>
