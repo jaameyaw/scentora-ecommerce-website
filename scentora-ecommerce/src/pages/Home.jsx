@@ -68,12 +68,13 @@ export default function Home() {
 
 
     const bestsellers = perfumes.filter(perfume => perfume.tags.includes('best-selling'));
-    const navigate = useNavigate();
 
     return (
         <>
             <Hero />
+
             <PerfumeofTheWeek />
+            
             <SectionWrapper>
                 <SectionTitle subtitle="New perfumes" title="Shop by category" />
                 <div className="categories-grid">
@@ -112,8 +113,9 @@ export default function Home() {
                 {bestsellers.map((perfume) => (
                     <ProductCard  
                     perfume={perfume}
-                    key={perfume.key}
-                    onAddToCart={addToCart}/>
+                    key={perfume.id}
+                    onAddToCart={addToCart}
+                    />
                 ))}
                 </div>
             </SectionWrapper>
