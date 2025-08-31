@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import Button from '../components/Button';
 import './CartContent.css';
 
-const CartContent = ({variant, showSummary, onClose}) => {
+const CartContent = ({variant, showSummary}) => {
     const { cart, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
     const navigate = useNavigate();
 
