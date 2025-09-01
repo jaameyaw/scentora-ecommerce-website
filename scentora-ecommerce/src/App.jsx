@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
+import { use, useEffect, useState } from 'react';
+import Loader from './components/Loading';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
@@ -17,6 +18,20 @@ import Footer from './components/Footer';
 
 
 function App() {
+const [loading, setLoading] = useState(true);
+
+  useEffect(()=> {
+    const handleload = () => {
+      setTimeout(()=> {setLoading(false)}, 800)
+    }
+
+    window.addEventListener("load", handleload)
+
+    return () => {
+      window.removeEventListener("load", handleload)
+    }
+  }
+  ,[])
 
   return (
     
