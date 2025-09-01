@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { use, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Loader from './components/Loading';
 import ScrollToTop from './components/ScrollToTop';
 import Navbar from './components/Navbar';
@@ -34,19 +34,9 @@ const [loading, setLoading] = useState(true);
   ,[])
 
   return (
-    
-    <Router>
-      <ScrollToTop />
-      <Navbar/>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop />} />
         <Route path="/shop/:category" element={<Shop  />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/product/:slug" element={<ProductDetails  />} />
-        <Route path="/cart" element={<Cart />} />
-      </Routes>
+    <>
+      <Loader loading={loading}/>
 
       <CartSideBar>
         <CartContent variant='sidebar' showSummary = {false}/>
