@@ -31,25 +31,27 @@
 }
 
 .filterSiderContent {
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .filterSection {
-  margin-bottom: 1.8rem;
+  margin-bottom: 2.7rem;
 }
 
 .filterSection h3 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: #444;
   margin-bottom: 1rem;
+  font-family: var(--font-title);
 }
 
 .filterSection label {
   display: block;
-  margin-bottom: 0.7rem;
-  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  font-size: 0.85rem;
   color: #333;
+  font-family: var(--font-body);
   cursor: pointer;
 }
 
@@ -70,9 +72,7 @@ input[type="radio"] {
 
 .filterButtons {
   display: flex;
-  justify-content: space-between;
   gap: 1rem;
-  margin-top: 2rem;
 }
 
 
