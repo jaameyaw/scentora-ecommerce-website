@@ -1,7 +1,7 @@
 
 import './PriceBox.css';
 
-export default function PriceBox({ value, onChange, placeholder }) {
+export default function PriceBox({ value, placeholder }) {
 
     return (
         <div className="price-box">
