@@ -76,6 +76,7 @@ export default function About() {
                 </div>
             </section>
 
+
             {/* Meet the Creator Section */}
             <section className="meet-creator">
                 <div className="creator-container">
@@ -101,5 +102,14 @@ export default function About() {
                 </div>
             </section>
 
+            
+
+            <div className="about-cta">
+                <h2>Ready to experience more?</h2>
+                <div className="about-cta-button">
+                    <Button className='button button-gold' onClick={() => navigate('/shop')}>Shop now</Button>
+                </div>
+            </div> 
+        </section>
     )
 }
