@@ -61,5 +61,19 @@ export default function About() {
             </div>
 
 
+            <section className="core-values">
+                <div className="core-container">
+                    <h2 className="core-title">Best in business for a reason</h2>
+                    <div className="values-container">
+                        {values.map((val, index) => (
+                        <div key={index} className="value-card">
+                            <img src={val.icon} alt={val.title} className="icon" />
+                            <h3>{val.title}</h3>
+                            <p>{val.description}</p>
+                        </div>
+                        ))}
+                    </div>
+                </div>
+            </section>
     )
 }
