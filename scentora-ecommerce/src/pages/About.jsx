@@ -41,5 +41,25 @@ export default function About() {
                         {to:"/About", label: "About"}
                     ]}/>
                 </div>
+
+                <div className="about-container">
+                    <AboutInfo 
+                        smallText="a few words" 
+                        title="About Us"
+                        description="Scentora is a modern fragrance brand dedicated to curating timeless scents that embody elegance, individuality, and confidence. Blending artistry with quality craftsmanship, we create perfumes that leave lasting impressions and celebrate the uniqueness of every wearer."
+                        imgSrc={aboutImg}
+                    />
+
+                    <AboutInfo
+                    smallText="how it all began" 
+                    title="Our Story"
+                    description="Born from a passion for fine fragrances, Scentora began with the mission to make luxury scents more personal and accessible. Every bottle reflects a story of artistry, culture, and authenticity—crafted not just to be worn, but to be experienced."
+                    imgSrc={storyImg}
+                    reverse
+                    />
+                </div>
+            </div>
+
+
     )
 }
