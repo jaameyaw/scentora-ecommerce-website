@@ -33,8 +33,13 @@ export default function About() {
     ];
 
     return (
-        <>
-            <h1>About Us</h1>
-        </>
+        <section className="about-us">
+            <div className="about ">
+                <div className="about-header">
+                    <Breadcrumb links={[
+                        {to:"/", label: "Home"},
+                        {to:"/About", label: "About"}
+                    ]}/>
+                </div>
     )
 }
