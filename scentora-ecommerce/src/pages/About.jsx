@@ -75,5 +75,31 @@ export default function About() {
                     </div>
                 </div>
             </section>
+
+            {/* Meet the Creator Section */}
+            <section className="meet-creator">
+                <div className="creator-container">
+                    <div className="creator-text">
+                        <span className="tag">just by the way...</span>
+                        <h1>
+                            I’m <span className="highlight">Johnson Ameyaw,</span>
+                        </h1>
+                        <p>
+                            I develop user-centered interactive digital presence for businesses, NGOs, or any organization that wants its mission heard online. <br />
+                            Scentora is one of my works. If you need online presence for your brand—or even want an online shop like this for your perfume business or any other business—text me, let’s discuss it.
+                        </p>
+                        <div className="creator-buttons">
+                            <a href="https://wa.me/233242142297" target='_blank' rel="noopener noreferrer" className='button button-gold'>Dm let's talk</a>
+                            <a href="https://www.linkedin.com/in/johnson-addo-ameyaw-026134283" rel="noopener noreferrer" target='_blank' className='button button-black'>Hire me</a>
+                        </div>
+                    </div>
+                    <div className="creator-image">
+                        <div className="blob">
+                            <img src="/images/about-me.png" alt="Johnson Ameyaw" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
     )
 }
