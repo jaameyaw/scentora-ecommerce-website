@@ -48,3 +48,38 @@ export default function Contact() {
                 <p>Have a question about our fragrances or need help with an order? We’d love to hear from you.</p>
             </div>
 
+            <div className="contact-wrapper">
+
+                <div className="contact-information">
+                    <small>how can we help you?</small>
+                    <h3>Contact information</h3>
+
+                    {contactDetails.map ((contact, index) =>(
+                        <div className="contact-about" key={index}>
+                            <div className="contact-icon">
+                                <i className={contact.icon}></i>
+                            </div>
+
+                            <div className="contact-info">
+                                <h5>{contact.type}</h5>
+                                {contact.link ?( <a href={contact.link} target="_blank" rel="noopener noreferrer">
+                                    {contact.info}
+                                </a> ): (
+                                    <h4 className="location-info">{contact.info}</h4>
+                                )
+                            }
+                            </div>
+                        </div>
+                    ))}
+
+
+                    <div className=" contact-socials">
+                        <h3>Follow us</h3>
+
+                        <div className="contact-social">
+                            <a href="" target="_blank"><img src="images/contact-icons/twitter.png" alt="logo of twitter" /></a>
+                            <a href="" target="_blank"><img src="/images/contact-icons/instagram.png" alt="logo of instagram" /></a>
+                            <a href="" target="_blank"><img src="/images/contact-icons/tik-tok.png" alt="logo of tik-tok" /></a>
+                        </div>
+                    </div>
+                </div>
