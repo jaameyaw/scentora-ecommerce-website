@@ -36,3 +36,15 @@ export default function Contact() {
             link: null
         }, 
     ]
+    return (
+        <section className="contact-us">
+            <Breadcrumb links={[
+                {to:'/', label:'Home'},
+                {to: '/About', label: 'Contact'}
+            ]} /> 
+
+            <div className="contact-heading">
+                <h2>Get in touch</h2>
+                <p>Have a question about our fragrances or need help with an order? We’d love to hear from you.</p>
+            </div>
+
