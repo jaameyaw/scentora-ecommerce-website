@@ -83,3 +83,40 @@ export default function Contact() {
                         </div>
                     </div>
                 </div>
+
+                <div className="contact-form">
+                    <h3>Send us a message</h3>
+
+                    <form action="">
+                        <div className="form-row">
+                            <div className="form-group">
+                                <label htmlFor="firstname">First Name</label>
+                                <input type="text" id="firstName" placeholder="Your first name" required />
+                            </div>
+
+                            <div className="form-group">
+                                <label htmlFor="firstname">Last Name</label>
+                                <input type="text" id="LastName" placeholder="Your last name" required />
+                            </div>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="email">Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" required />
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="message">Message</label>
+                            <textarea id="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+
+                        <Button className='button button-gold'> Send Message <i class="fa-solid fa-paper-plane"></i></Button>
+                    </form>
+
+                </div>
+            </div>
+
+        </section>
+       
+    )
+}
