@@ -1,0 +1,35 @@
+.contact-us {
+    padding: 2rem;
+}
+
+.contact-heading {
+    text-align: center;
+    margin: 2rem 0rem;
+}
+
+.contact-heading h2 {
+    font: 400 2.5rem var(--font-heading);
+    text-transform: capitalize;
+    font-weight: 500; 
+    position: relative;
+}
+
+.contact-heading h2::after {
+    content: "";
+    display: block;
+    width: 90px;
+    height: 3px;
+    background: var(--gold);
+    margin: 0.6rem auto 0;
+}
+
+.contact-heading p {
+    font-family: var(--font-body);
+    max-width: 700px;
+    margin: 0 auto;
+    color: #444;
+    line-height: 1.6;
+    padding-top: 20px;
+}
+
+
