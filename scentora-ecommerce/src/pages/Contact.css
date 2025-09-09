@@ -40,3 +40,84 @@
   gap: 2rem;
   flex-wrap: wrap;
 }
+
+.contact-information {
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-information small {
+    font-size: 0.8rem;
+    color: var(--dark-gray);
+    font-family: var(--font-body);
+}
+
+.contact-information h3 {
+    padding-top: 0.4rem;
+    padding-bottom: 1.7rem;
+}
+
+.contact-information h3, .contact-socials h3 {
+    font-family: var(--font-heading);
+    text-transform: capitalize;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+.contact-about {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+}
+
+.contact-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contact-icon i {
+    font-size: 18px;
+    color: #fff;
+}
+
+.contact-info h5 {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #777;
+}
+
+.contact-info a {
+  text-decoration: none;
+  transition: .3s;
+}
+
+.contact-info a:hover {
+  color: var(--gold);
+}
+
+.location-info, .contact-info a {
+    font-size: 14px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    color: var(--errie-black);
+}
+
+.contact-social a:not(:first-child) {
+  padding-left: 2rem;
+}
+
+
+
+
+.contact-information, .contact-form {
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 9px;
+}
+
