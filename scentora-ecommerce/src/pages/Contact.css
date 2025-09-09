@@ -33,6 +33,18 @@
 }
 
 
+@media (max-width: 768px) {
+    .contact-header h2 {
+        font-size: 2rem;
+    }
+
+    .contact-header p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+}
+
+
 .contact-wrapper {
   max-width: 1200px;
   margin: 2rem auto 0;
@@ -176,4 +188,14 @@
   border-color: var(--gold);
   box-shadow: 0 0 6px rgba(212, 175, 55, 0.4); 
   outline: none;
+}
+@media (max-width: 768px) {
+
+    .contact-us {
+        padding: 0.8rem;
+    }
+
+    .contact-wrapper {
+        flex-direction: column;
+    }
 }
