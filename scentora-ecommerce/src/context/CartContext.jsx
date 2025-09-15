@@ -55,6 +55,10 @@ export function CartProvider ({children}) {
         )
     }
 
+    const clearCart = () => {
+        setCart([]);
+    }
+
     // calculating the total in terms of quantity
     const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
 
@@ -67,7 +71,7 @@ export function CartProvider ({children}) {
     
 
 
-    const value = { cart, cartCount, cartTotal, isCartOpen, setCart, addToCart, removeFromCart, updateQuantity, openCart,
+    const value = { cart, cartCount, cartTotal, isCartOpen, setCart, addToCart, removeFromCart, updateQuantity, clearCart, openCart,
         closeCart, toggleCart}
 
     return (
