@@ -5,7 +5,7 @@ import Button from '../components/Button';
 import './CartContent.css';
 
 const CartContent = ({variant, showSummary}) => {
-    const { cart, cartTotal, removeFromCart, updateQuantity } = useContext(CartContext);
+    const { cart, cartTotal, clearCart, removeFromCart, updateQuantity } = useContext(CartContext);
     const navigate = useNavigate();
 
     return (
