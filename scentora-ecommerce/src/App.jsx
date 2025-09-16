@@ -13,6 +13,7 @@ import ProductDetails from './pages/ProductDetails';
 import CartSideBar from './components/CartSideBar';
 import CartContent from './components/CartContent';
 import SectionWrapper from './components/SectionWrapper';
+import Checkout from './components/Checkout';
 import Newsletter from './components/Newsletter';
 import Footer from './components/Footer';
 
@@ -49,6 +50,7 @@ const [loading, setLoading] = useState(true);
             <Route path="/contact" element={<Contact />} />
             <Route path="/product/:slug" element={<ProductDetails  />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path='/checkout' element={<Checkout />} />
           </Routes>
 
           <CartSideBar>
