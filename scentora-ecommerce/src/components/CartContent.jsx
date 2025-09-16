@@ -95,7 +95,11 @@ const CartContent = ({variant, showSummary}) => {
                         <span className='cart-summary-value'>${cartTotal.toFixed(2)}</span>
                     </div>
 
-                    <Button className="button button-gold width">Checkout</Button>
+                    <Button className='button button-gold width' onClick={() => {
+                        navigate('/checkout');
+                    }}>
+                        Proceed to Checkout    
+                    </Button>
                 </div>
             }
             </div>
