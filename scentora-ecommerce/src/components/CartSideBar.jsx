@@ -55,7 +55,10 @@ const CartSideBar = ({children}) => {
                         <span className='cart-summary-value' >${cartTotal.toFixed(2)}</span>
                     </div>
 
-                    <Button className='button button-black width'>
+                    <Button className='button button-black width' onClick={() => {
+                        closeCart();
+                        navigate('/checkout');
+                    }}>
                         Proceed to Checkout    
                     </Button>
 
