@@ -21,6 +21,8 @@ export default function SuccessModal({ open, transactionRef }) {
           },
         },
       }}
+    >
+      <Fade in={open}>
         <Box
           sx={{
             position: "absolute",
@@ -67,5 +69,7 @@ export default function SuccessModal({ open, transactionRef }) {
             Go Back Home
           </Button>
         </Box>
+      </Fade>
     </Modal>
+  );
 }
