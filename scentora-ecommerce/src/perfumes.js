@@ -1,7 +1,7 @@
 // src/data/perfumes.js
-import yslLibre from './assets/products/ysl-libre.webp';
+import goodGirlParfum from './assets/products/good-girl-parfum.webp';
 import diorSauvage from './assets/products/dior-sauvage.webp';
-import chanelNo5 from './assets/products/no5-chanel.jpg';
+import versaceCrystal from './assets/products/versace-crystal.webp';
 import ckOne from './assets/products/ck-one.webp';
 import armaniSi from './assets/products/arman-si.webp';
 import bvlgariMan from './assets/products/black-man.webp';
@@ -14,22 +14,11 @@ import gucciBloom from './assets/products/gucci-bloom.webp';
 import jeanPaulScandal from './assets/products/jean-paul-scandal.webp';
 import baccaratRouge from './assets/products/baccaratRouge.webp';
 import lancomeLaVie from './assets/products/lancome-la-vie.webp';
-import yslY from './assets/products/ysl-l-parfum.webp';
+import yslY from './assets/products/ysl.jpg';
 
 const perfumes = [
   {
     id: 1,
-    name: 'YSL Libre Eau de Parfum',
-    slug: 'ysl-libre-eau-de-parfum',
-    price: 120,
-    salePrice: 100,
-    category: 'women',
-    tags: ['exclusive', 'best-selling'],
-    image: yslLibre,
-    description: 'Libre by Yves Saint Laurent is a bold, floral fragrance with notes of lavender, orange blossom, and musk. A scent of freedom for modern women.'
-  },
-  {
-    id: 2,
     name: 'Dior Sauvage',
     slug: 'dior-sauvage',
     price: 140,
@@ -40,15 +29,26 @@ const perfumes = [
     description: 'Dior Sauvage is a powerful and fresh scent featuring bergamot, pepper, and amberwood, inspired by wide-open landscapes.'
   },
   {
+    id: 2,
+    name: 'Girl Eau De Parfum',
+    slug: 'girl-eau-de-parfum',
+    price: 139,
+    salePrice: 187,
+    category: 'women',
+    tags: ['exclusive', 'best-selling'],
+    image: goodGirlParfum,
+    description: 'Good Girl Eau De Parfum is a bold, floral fragrance with notes of lavender, orange blossom, and musk. A scent of freedom for modern women.'
+  },
+  {
     id: 3,
-    name: 'Chanel No. 5',
-    slug: 'chanel-no-5',
+    name: 'Crystal Eau De Toilette',
+    slug: 'crystal-eau-de-toilette',
     price: 160,
     salePrice: 135,
     category: 'women',
     tags: ['exclusive'],
-    image: chanelNo5,
-    description: 'Chanel No. 5 is an iconic aldehydic floral fragrance blending jasmine, rose, and sandalwood—timeless and elegant.'
+    image: versaceCrystal,
+    description: 'Crystal Eau De Toilette is an iconic aldehydic floral fragrance blending jasmine, rose, and sandalwood—timeless and elegant.'
   },
   {
     id: 4,
@@ -156,14 +156,14 @@ const perfumes = [
   },
   {
     id: 14,
-    name: "Maison Francis Kurkdjian Baccarat Rouge 540",
-    slug: "maison-francis-kurkdjian-baccarat-rouge-540",
+    name: "Maison Francis Kurkdjian Baccarat",
+    slug: "maison-francis-kurkdjian-baccarat",
     price: 420,
     salePrice: 380,
     category: "unisex",
     tags: ["exclusive"],
     image: baccaratRouge,
-    description: 'Baccarat Rouge 540 is an amber floral fragrance with saffron, amberwood, and cedar—a luxurious and hypnotic scent.'
+    description: 'Baccarat Rouge is an amber floral fragrance with saffron, amberwood, and cedar—a luxurious and hypnotic scent.'
   },
   {
     id: 15,
