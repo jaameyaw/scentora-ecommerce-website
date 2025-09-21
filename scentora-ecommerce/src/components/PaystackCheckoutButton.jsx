@@ -43,10 +43,6 @@ export default function PaystackCheckoutButton({ email, name, phone, disabled })
     handler.openIframe();
   };
 
-  const buttonDisabled = {
-    opacity: "0.5",
-    cursor: "not-allowed"
-  }
 
   return (
     <Button
