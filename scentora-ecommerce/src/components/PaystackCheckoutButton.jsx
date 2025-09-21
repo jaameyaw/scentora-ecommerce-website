@@ -1,11 +1,11 @@
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { CartContext } from '../context/CartContext'; 
 import Button from './Button';
-import { useNavigate } from 'react-router-dom';
+import SuccessModal from './SuccessModal';
 
 export default function PaystackCheckoutButton({ email, name, phone, disabled }) {
-  const navigate = useNavigate()
   const { cartTotal, clearCart } = useContext(CartContext);
+  const [openSuccess, setOpenSuccess] = useState(false);
 
   const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
   const amountInPesewas = Math.round(Number(cartTotal || 0) * 100);
@@ -18,7 +18,7 @@ export default function PaystackCheckoutButton({ email, name, phone, disabled })
       email: email || "customer@example.com",
       amount: amountInPesewas,
       currency: "GHS",
-      ref: String(Date.now()), // unique reference
+      ref: String(Date.now()), 
       metadata: {
         custom_fields: [
           {
@@ -28,9 +28,10 @@ export default function PaystackCheckoutButton({ email, name, phone, disabled })
           },
         ],
       },
-      callback: function () {
+      callback: function (response) {
+        setTransactionRef(response.reference);
         clearCart();
-        navigate('/success')
+        setOpenSuccess(true)
       },
       onClose: function () {
         alert("❌ Payment window closed.");
