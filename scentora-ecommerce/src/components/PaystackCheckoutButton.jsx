@@ -45,14 +45,17 @@ export default function PaystackCheckoutButton({ email, name, phone, disabled })
 
 
   return (
-    <Button
-      onClick={payWithPaystack}
-      className={`button button-gold width ${disabled ? "disabled" : ""}`}
-      disabled={disabled}
-      style={buttonDisabled}
-    >
-      Pay GHS {Number(cartTotal || 0).toFixed(2)}
-    </Button>
+    <>
+      <Button
+        onClick={payWithPaystack}
+        className={`button button-gold width ${disabled ? "disabled" : ""}`}
+        disabled={disabled}
+        style={disabled? { opacity: 0.5, cursor: "not-allowed" } : {}}
+      >
+        Pay GHS {Number(cartTotal || 0).toFixed(2)}
+      </Button>
+
       <SuccessModal open={openSuccess} transactionRef={transactionRef}/>
+    </>
   );
 }
