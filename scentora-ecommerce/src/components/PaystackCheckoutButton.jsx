@@ -6,6 +6,8 @@ import SuccessModal from './SuccessModal';
 export default function PaystackCheckoutButton({ email, name, phone, disabled }) {
   const { cartTotal, clearCart } = useContext(CartContext);
   const [openSuccess, setOpenSuccess] = useState(false);
+  const [transactionRef, setTransactionRef] = useState(null);
+
 
   const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
   const amountInPesewas = Math.round(Number(cartTotal || 0) * 100);
@@ -55,5 +57,6 @@ export default function PaystackCheckoutButton({ email, name, phone, disabled })
     >
       Pay GHS {Number(cartTotal || 0).toFixed(2)}
     </Button>
+      <SuccessModal open={openSuccess} transactionRef={transactionRef}/>
   );
 }
