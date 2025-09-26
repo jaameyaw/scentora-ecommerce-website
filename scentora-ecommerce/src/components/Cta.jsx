@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode } from "swiper/modules";
 import { useNavigate } from "react-router-dom";
 import "swiper/css";
-import "./cta.css";
+import "./Cta.css";
 
 const images = [
   { src: "/images/perfumesGallery/perfume1.jpg" },
