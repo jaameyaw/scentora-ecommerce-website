@@ -19,6 +19,9 @@ import Footer from './components/Footer';
 
 
 function App() {
+console.log("App mounted ✅");
+console.log("ENV:", import.meta.env.VITE_PAYSTACK_PUBLIC_KEY);
+
 const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
@@ -36,6 +39,7 @@ const [loading, setLoading] = useState(true);
 
   return (
     <>
+
       <Loader loading={loading}/>
 
       {!loading &&   
