@@ -8,9 +8,8 @@ import CategoryCard from '../components/CategoryCard';
 import TestimonialCarousel from '../components/TestimonialCarousel';
 import ProductCard from '../components/ProductCard.jsx';
 import perfumes from '../perfumes.js'; 
-import { useNavigate } from 'react-router-dom';
 import { useContext } from 'react';
-import Cta from '../components/CTA.jsx';
+import Cta from '../components/Cta.jsx';
 import { CartContext } from '../context/CartContext.jsx';
 
 
