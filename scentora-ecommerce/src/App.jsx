@@ -26,13 +26,11 @@ const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
     const handleload = () => {
-      setTimeout(()=> {setLoading(false)}, 800)
+      setTimeout(()=> {setLoading(false)}, 900)
     }
 
-    window.addEventListener("load", handleload)
-
     return () => {
-      window.removeEventListener("load", handleload)
+      clearTimeout(handleload);
     }
   }
   ,[])
