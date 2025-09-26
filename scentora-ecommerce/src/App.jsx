@@ -25,15 +25,12 @@ console.log("ENV:", import.meta.env.VITE_PAYSTACK_PUBLIC_KEY);
 const [loading, setLoading] = useState(true);
 
   useEffect(()=> {
-    const handleload = () => {
-      setTimeout(()=> {setLoading(false)}, 900)
-    }
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 900);
 
-    return () => {
-      clearTimeout(handleload);
-    }
-  }
-  ,[])
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
