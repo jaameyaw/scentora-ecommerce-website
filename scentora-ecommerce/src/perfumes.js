@@ -14,7 +14,7 @@ import gucciBloom from './assets/products/gucci-bloom.webp';
 import jeanPaulScandal from './assets/products/jean-paul-scandal.webp';
 import baccaratRouge from './assets/products/baccaratRouge.webp';
 import lancomeLaVie from './assets/products/lancome-la-vie.webp';
-import yslY from './assets/products/ysl.jpg';
+import yslLibre from './assets/products/ysl.jpg';
 
 const perfumes = [
   {
@@ -177,14 +177,14 @@ const perfumes = [
   },
   {
     id: 16,
-    name: 'YSL Y Eau de Parfum',
-    slug: 'ysl-y-eau-de-parfum',
+    name: 'YSL Libre Eau de Parfum',
+    slug: 'ysl-libre-eau-de-parfum',
     price: 125,
     salePrice: 110,
     category: 'unisex',
     tags: [],
-    image: yslY,
-    description: 'Y by Yves Saint Laurent is a fresh and woody fragrance with bergamot, sage, and tonka bean—clean and charismatic.'
+    image: yslLibre,
+    description: 'YSL Libre is a fresh and woody fragrance with bergamot, sage, and tonka bean—clean and charismatic.'
   }
 ];
 
