@@ -10,7 +10,7 @@
 }
 
 .hero {
-  background: url('/images/hero-background2.jpg') right;
+  background: url('/images/hero-background.jpg') right;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   background-size: cover;
