@@ -59,7 +59,7 @@ export default function Navbar() {
             <Link to="/shop/men" className="link" onClick={toggleMenu}>Men</Link>
             <Link to="/shop/women" className="link" onClick={toggleMenu}>Women</Link>
             <Link to="/shop/unisex" className="link" onClick={toggleMenu}>Unisex</Link>
-            <Link to="/shop" className="link" onClick={toggleMenu}>Scent of the Month</Link>
+            <Link to="/product/ysl-libre-eau-de-parfum" className="link" onClick={toggleMenu}>Scent of the Month</Link>
             <Link to="/about" className="link" onClick={toggleMenu}>About</Link>
             <a href="#contact" className="link" onClick={toggleMenu}>Contact</a>
         </div>
