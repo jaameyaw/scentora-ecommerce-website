@@ -1,5 +1,6 @@
 
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import perfumes from "../perfumes";
 import './ProductDetails.css';
 import Button  from '../components/Button';
@@ -10,7 +11,12 @@ import { CartContext } from "../context/CartContext";
 export default function ProductDetails() {
     const { addToCart } = useContext(CartContext);
     const [quantity, setQuantity] = useState(1);
+    const navigate = useNavigate();
 
+    const handleBuyNow = () => {
+        const itemTotal = product.salePrice ? product.salePrice * quantity : product.price * quantity;
+        navigate("/checkout", { state: { price: itemTotal}})
+    }
 
     const { slug } = useParams()
     const product = perfumes.find(p => p.slug === slug);
@@ -63,7 +69,7 @@ export default function ProductDetails() {
 
                     <div className="product-buttons">
                         <Button className="button button-gold" onClick={() => addToCart(product, quantity)}>add to cart</Button>
-                        <Button className="button button-black">buy now</Button>
+                        <Button className="button button-black" onClick={handleBuyNow}>buy now</Button>
                         <Button className="button-icon">
                             <i className="fa-regular fa-heart"></i>
                         </Button>
