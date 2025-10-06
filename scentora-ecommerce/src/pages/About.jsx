@@ -96,7 +96,7 @@ export default function About() {
                     </div>
                     <div className="creator-image">
                         <div className="blob">
-                            <img src="/images/about-me.png" alt="Johnson Ameyaw" />
+                            <img src="/images/author-img.jpg" alt="an image of the author Johnson Ameyaw" />
                         </div>
                     </div>
                 </div>
