@@ -1,10 +1,14 @@
 import { useState, useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 import './Checkout.css';
 import PaystackCheckoutButton from "./PaystackCheckoutButton";
 
 export default function Checkout () {
     const {cartTotal} = useContext(CartContext)
+    const location = useLocation();
+
+    const { price: singleProductPrice } = location.state || {};
 
     const [formData, setFormData] = useState({
         name: "",
@@ -57,7 +61,7 @@ export default function Checkout () {
             <div className="checkout-header">
                 <h1 className="checkout-title">Checkout</h1>
                 <p className="checkout-total">
-                     GHS {Number(cartTotal || 0).toFixed(2)}
+                     GHS {Number( singleProductPrice || cartTotal || 0).toFixed(2)}
                 </p>   
             </div>
 
