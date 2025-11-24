@@ -1,4 +1,4 @@
-# 🌸 Scentora — Perfume E-Commerce Web App
+# 🌸 Scentora, Perfume E-Commerce Web App
 
 **Scentora** is a modern perfume e-commerce web application built with **React**.  
 It features a smooth and responsive user interface, dynamic product filtering, cart management with a sidebar preview, and secure payment integration through **Paystack** (test mode).
